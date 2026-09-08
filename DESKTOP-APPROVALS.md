@@ -36,3 +36,6 @@ Prompt: preserve approved hands, cards, notepad, threads and composition; remove
 - Connecting thread uses smooth curves, no right angles.
 - Leads captured: three figures group into the centre, then the task-list sheet and checks appear (same tile as Tasks).
 - Follow-up automated: envelope tile with a pencil clock badge; flap opens, sheet slides in, flap closes, envelope sends, clock becomes the pencil check.
+
+## Approach scene (2026-09-07 comments)
+- Thread is one smooth curve through the sketch nodes on the paper map (pen tip, circle, target, left document, folder, pie, centre document, bottom arrow, right circle, right document). No straight cuts, no corners.
