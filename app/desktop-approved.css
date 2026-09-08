@@ -35,12 +35,10 @@
 .benefit>strong{font-size:16px;font-weight:400;display:block;line-height:1.2;margin-top:9px}
 .separate-people,.lead-people{position:absolute;display:flex;inset:10% 0 20%;gap:3px;z-index:2}
 .separate-people .illustrated-node{width:33%}
-.sound-lines,.growth-arrow{position:absolute;left:0;top:0;width:100%;aspect-ratio:1;fill:none;stroke:#386f65;stroke-width:2.4;pointer-events:none}
-.paper-email{aspect-ratio:1;background:#f4e6ce url('/images/parchment.jpg') center/500px;border:1px solid #958b70;border-radius:4px 7px 3px 6px;box-shadow:1px 3px 4px #5e482229;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:8px;color:var(--text);font-size:13px;text-align:left}
-.paper-email .mail-subject{font-size:15px;border-bottom:1px solid #8b948073;padding-bottom:5px}
-.paper-email svg{fill:none;stroke:var(--teal);stroke-width:2}
 .benefit-leads .lead-people{opacity:0}
-.benefit-followup .scheduled{display:none}
+.followup-badge{position:absolute;right:-12%;top:-14%;width:56%;aspect-ratio:1;z-index:3}
+.followup-badge img{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:multiply}
+.badge-check{opacity:0}
 .priority-field{grid-column:1/-1}
 .priority-field legend{font-size:17px;margin-bottom:10px}
 .priority-field>div{display:flex;gap:30px}
@@ -126,27 +124,32 @@
  .ordered-workflow .route-draw{animation-timing-function:steps(5,end)}
  /* Workflow tiles: the thread reaches tile i at 1s + i*1s; the paper stays put and only the drawing reacts. */
  .seen .action-0 .tile-draw{animation:spin-y .8s 1s both}
- .motion-ready .scene:not(.seen) .draw1-v0,.motion-ready .scene:not(.seen) .draw1-v1,.motion-ready .scene:not(.seen) .draw1-v2,.motion-ready .scene:not(.seen) .draw4-v{clip-path:inset(0 100% 0 0)}
- .seen .draw1-v0{animation:wipe-in .25s 2s both}.seen .draw1-v1{animation:wipe-in .25s 2.25s both}.seen .draw1-v2{animation:wipe-in .25s 2.5s both}
+ .motion-ready .scene:not(.seen) .draw1-v0,.motion-ready .scene:not(.seen) .draw1-v1,.motion-ready .scene:not(.seen) .draw1-v2,.motion-ready .scene:not(.seen) .action-4 .draw4-v,.motion-ready .scene:not(.seen) .draw9-arrow{clip-path:inset(0 100% 0 0)}
+ .motion-ready .scene:not(.seen) .draw8-l0,.motion-ready .scene:not(.seen) .draw8-l1,.motion-ready .scene:not(.seen) .draw8-l2,.motion-ready .scene:not(.seen) .benefit-leads .draw1-base{opacity:0}
+ .seen .action-1 .draw1-v0{animation:wipe-in .25s 2s both}.seen .action-1 .draw1-v1{animation:wipe-in .25s 2.25s both}.seen .action-1 .draw1-v2{animation:wipe-in .25s 2.5s both}
  .motion-ready .scene:not(.seen) .calendar-marks path{stroke-dasharray:1;stroke-dashoffset:1}
  .seen .calendar-marks path{stroke-dasharray:1;animation:thread-draw .3s calc(3s + var(--check)*.25s) both}
  .seen .action-3 .draw3-flap{animation:flap-cycle 1.1s 4s both}
  .seen .action-3 .tile-letter{animation:letter-in .5s 4.25s forwards}
  .seen .action-3 .tile-wrap{animation:envelope-send .8s 5.1s both}
- .seen .draw4-v{animation:wipe-in .35s 5s both}
+ .seen .action-4 .draw4-v{animation:wipe-in .35s 5s both}
  .seen .ordered-item .node-seal circle{animation:seal-fill .3s calc(1s + var(--i)*1s) both}
  .seen .ordered-item .node-seal path{animation:seal-ink .3s calc(1s + var(--i)*1s) both}
  .opportunity.seen .opportunity-art>.ink-route .route-draw{animation-delay:5s;animation-duration:6s}
  .motion-ready .scene:not(.seen) .route-draw{stroke-dashoffset:1}
  .seen .benefit-6 .separate-people{animation:merge-people .8s 7s both}
  .seen .benefit-6>.illustrated-node .tile-draw{animation:copy-in .3s 7.7s both}
- .seen .sound-lines{animation:sound-pulse .8s 9s both}
- .seen .growth-arrow path{stroke-dasharray:1;animation:thread-draw .65s 10s both}
- .seen .benefit-leads .paper-email{animation:copy-in .4s 11s both}
+ /* Growth row: exposure lines, marketing arrow, leads grouping into the list, follow-up envelope. */
+ .seen .draw8-l0{animation:copy-in .25s 9s both}.seen .draw8-l1{animation:copy-in .25s 9.25s both}.seen .draw8-l2{animation:copy-in .25s 9.5s both}
+ .seen .draw9-arrow{animation:wipe-in .7s 10s both}
+ .seen .benefit-leads .draw1-base{animation:copy-in .4s 11s both}
+ .seen .benefit-leads .draw1-v0{animation:wipe-in .25s 11.3s both}.seen .benefit-leads .draw1-v1{animation:wipe-in .25s 11.5s both}.seen .benefit-leads .draw1-v2{animation:wipe-in .25s 11.7s both}
+ .seen .benefit-followup .draw3-flap{animation:flap-cycle 1.1s 12s both}
+ .seen .benefit-followup .tile-letter{animation:letter-in .5s 12.25s forwards}
+ .seen .benefit-followup .tile-wrap{animation:envelope-send .8s 13.1s both}
+ .seen .benefit-followup .badge-clock{animation:copy-out .3s 13.3s both}
+ .seen .benefit-followup .badge-check{animation:copy-in .3s 13.5s both}
  .seen .benefit-leads .lead-people{animation:leads-merge 1s 10.1s both}
- .seen .benefit-followup .scheduled{display:block;animation:scheduled-out .2s 12s both}
- .seen .benefit-followup .sent{animation:copy-in .3s 12s both}
- .seen .benefit-followup .paper-email svg{animation:envelope-send .8s 12s both}
  .seen .ledger-column h3{animation:copy-in .3s .6s both}
  .motion-ready .work:not(.seen) .ledger-task{opacity:0}
  .seen .ledger-task{animation:copy-in .22s var(--task-delay) both}
@@ -154,6 +157,7 @@
  .motion-ready .work:not(.seen) .task-check{stroke-dashoffset:1}
 }
 @keyframes copy-in{from{opacity:0}to{opacity:1}}
+@keyframes copy-out{to{opacity:0}}
 @keyframes card-float{from{transform:translate(0,0) rotate(-.6deg) scale(1)}to{transform:translate(5px,-18px) rotate(.9deg) scale(1.03)}}
 @keyframes thread-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 @keyframes spin-y{from{transform:perspective(400px) rotateY(0)}to{transform:perspective(400px) rotateY(360deg)}}
@@ -165,11 +169,10 @@
 @keyframes envelope-send{0%,100%{transform:translate(0,0);opacity:1}45%{transform:translate(22px,-14px);opacity:0}55%{transform:translate(-12px,8px);opacity:0}}
 @keyframes merge-people{0%{opacity:1;transform:scale(1)}85%{opacity:1;transform:scale(.4)}100%{opacity:0;transform:scale(.4)}}
 @keyframes leads-merge{0%{opacity:1;transform:scale(1)}80%{opacity:1;transform:scale(.35)}100%{opacity:0;transform:scale(.35)}}
-@keyframes sound-pulse{0%{opacity:0}25%{opacity:1}50%{opacity:.3}75%,100%{opacity:1}}
-@keyframes scheduled-out{to{opacity:0;height:0;overflow:hidden}}
 @media(prefers-reduced-motion:reduce){
  .hero-threads path{stroke-dasharray:none;stroke-dashoffset:0}
- .separate-people{display:none}
+ .separate-people,.lead-people{display:none}
+ .badge-clock{opacity:0}.badge-check{opacity:1}
  .scroll-cue i:before{transform:none}.scroll-cue i:after{top:38px}
  .text-process .process-stage-card.current,.text-process .process-stage-card:hover{transform:none;animation:none}
  .interruption{animation:none}
@@ -180,14 +183,8 @@
 
 /* Keep overlays aligned with the existing illustrated ingredients. */
 .separate-people{opacity:0}
-.benefit-growth:after{content:'';position:absolute;left:17%;top:12%;width:65%;height:38%;background:#ead9b7 url('/images/parchment.jpg') center/500px;z-index:1}
-.benefit-growth .growth-arrow{z-index:2}
-.benefit-speaker:after{content:'';position:absolute;left:77%;top:12%;width:18%;height:44%;background:#ead9b7 url('/images/parchment.jpg') center/500px;z-index:1}
-.benefit-speaker .sound-lines{z-index:2}
 @media(prefers-reduced-motion:no-preference){
  .seen .ordered-workflow .route-draw{animation-name:task-thread;animation-timing-function:linear}
- .motion-ready .scene:not(.seen) .growth-arrow path{stroke-dasharray:1;stroke-dashoffset:1}
- .seen .benefit-leads .paper-email span:not(.mail-subject){animation:copy-in .3s 11.3s both}
 }
 @keyframes task-thread{0%{stroke-dashoffset:1}10%,20%{stroke-dashoffset:.8}30%,40%{stroke-dashoffset:.6}50%,60%{stroke-dashoffset:.4}70%,80%{stroke-dashoffset:.2}90%,100%{stroke-dashoffset:0}}
 

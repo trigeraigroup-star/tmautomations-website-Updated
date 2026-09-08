@@ -30,3 +30,9 @@ Prompt: preserve approved hands, cards, notepad, threads and composition; remove
 - Tiles rebuilt as paper + drawing layers from the same sheet; no cream squares.
 - Thread runs through the seal row and fills each seal; last becomes the check.
 - People: figure spins, paper stays. Tasks: sheet starts without checks; the original pencil checks wipe in. Schedule: three amber pencil circles drawn on real date cells. Updates: flap opens, the task sheet slides into the pocket, flap closes, envelope sends. Complete: ring only until the thread arrives, then the original check wipes in.
+
+## Opportunity scene (2026-09-07 comments)
+- Labels: Exposure, Marketing. Megaphone shows without sound lines; its own pencil lines appear and stay. Chart shows bars; its own pencil arrow line wipes in.
+- Connecting thread uses smooth curves, no right angles.
+- Leads captured: three figures group into the centre, then the task-list sheet and checks appear (same tile as Tasks).
+- Follow-up automated: envelope tile with a pencil clock badge; flap opens, sheet slides in, flap closes, envelope sends, clock becomes the pencil check.
