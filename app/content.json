@@ -26,7 +26,7 @@
   },
   "pressure": {
     "title": "You know this day. You live it.",
-    "body": "A message. An invoice. Team questions.",
+    "body": "A message. An invoice. Team’s questions.",
     "objects": [
       [
         "Unread message",
@@ -41,7 +41,7 @@
         "Needs a follow-up"
       ],
       [
-        "Team question",
+        "Team’s question",
         "Who’s handling this after?"
       ],
       [
@@ -49,11 +49,11 @@
         "Starts in 05:00"
       ],
       [
-        "Team question",
+        "Team’s question",
         "Do you approve the updated version?"
       ],
       [
-        "Team question",
+        "Team’s question",
         "Has the client replied?"
       ],
       [
