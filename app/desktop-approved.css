@@ -24,15 +24,9 @@
 .interruption-6{right:1%;top:9%;width:190px}
 .interruption-7{left:35%;bottom:0;width:190px}
 .whatsapp-icon{width:36px;flex-shrink:0}
-.tile-wrap{display:block;position:relative;width:100%;aspect-ratio:1}
-.checks-mask{position:absolute;left:25%;top:25%;width:19%;height:48%;background:#e9d7b2 url('/images/parchment.jpg') center/500px;display:flex;flex-direction:column}
-.checks-mask svg{height:33%;width:100%;fill:none;stroke:#386f65;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
-.checks-mask path{stroke-dasharray:1;stroke-dashoffset:0}
-.complete-mask{position:absolute;left:27%;top:29%;width:48%;height:41%;background:#e9d7b2 url('/images/parchment.jpg') center/500px;border-radius:45%}
-.complete-mask svg{width:100%;height:100%;fill:none;stroke:#386f65;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
-.calendar-dates{position:absolute;left:32%;top:45%;display:flex;gap:9%;width:40%;height:17%}
-.calendar-dates i{width:26%;height:100%;border:2px solid #ad8042;border-radius:50%;opacity:0}
-.ordered-workflow>.ink-route{top:0;height:100%;z-index:1}
+/* Thread runs through the seal row (fixed seal height), not through the tiles. */
+.ordered-workflow>.ink-route{top:auto;bottom:0;height:32px;z-index:1}
+@media(max-width:800px){.ordered-workflow>.ink-route{height:24px}}
 .ordered-item{transform:none}
 .route-lead{display:none}
 .approach-thread .route-base{opacity:.15}
@@ -130,17 +124,22 @@
  .interruption-0{--bubble:0}.interruption-1{--bubble:1}.interruption-2{--bubble:2}.interruption-3{--bubble:3}.interruption-4{--bubble:4}.interruption-5{--bubble:5}.interruption-6{--bubble:6}.interruption-7{--bubble:7}
  .seen .route-draw{animation:thread-draw 5s .5s both;stroke-dasharray:1}
  .ordered-workflow .route-draw{animation-timing-function:steps(5,end)}
+ /* Workflow tiles: the thread reaches tile i at 1s + i*1s; the paper stays put and only the drawing reacts. */
+ .seen .action-0 .tile-draw{animation:spin-y .8s 1s both}
+ .motion-ready .scene:not(.seen) .draw1-v0,.motion-ready .scene:not(.seen) .draw1-v1,.motion-ready .scene:not(.seen) .draw1-v2,.motion-ready .scene:not(.seen) .draw4-v{clip-path:inset(0 100% 0 0)}
+ .seen .draw1-v0{animation:wipe-in .25s 2s both}.seen .draw1-v1{animation:wipe-in .25s 2.25s both}.seen .draw1-v2{animation:wipe-in .25s 2.5s both}
+ .motion-ready .scene:not(.seen) .calendar-marks path{stroke-dasharray:1;stroke-dashoffset:1}
+ .seen .calendar-marks path{stroke-dasharray:1;animation:thread-draw .3s calc(3s + var(--check)*.25s) both}
+ .seen .action-3 .draw3-flap{animation:flap-cycle 1.1s 4s both}
+ .seen .action-3 .tile-letter{animation:letter-in .5s 4.25s forwards}
+ .seen .action-3 .tile-wrap{animation:envelope-send .8s 5.1s both}
+ .seen .draw4-v{animation:wipe-in .35s 5s both}
+ .seen .ordered-item .node-seal circle{animation:seal-fill .3s calc(1s + var(--i)*1s) both}
+ .seen .ordered-item .node-seal path{animation:seal-ink .3s calc(1s + var(--i)*1s) both}
  .opportunity.seen .opportunity-art>.ink-route .route-draw{animation-delay:5s;animation-duration:6s}
  .motion-ready .scene:not(.seen) .route-draw{stroke-dashoffset:1}
- .seen .action-0 .tile-art{animation:vertical-turn .7s 1s both}
- .seen .action-3 .tile-wrap{animation:envelope-send .8s 4s both}
- .seen .action-4 .tile-wrap{animation:vertical-turn .7s 5s both}
- .seen .action-1 .checks-mask path{animation:thread-draw .28s calc(2s + var(--check)*.25s) both}
- .seen .action-4 .complete-mask path{animation:thread-draw .4s 5.35s both}
- .motion-ready .scene:not(.seen) .checks-mask path,.motion-ready .scene:not(.seen) .complete-mask path{stroke-dashoffset:1;stroke-dasharray:1}
- .seen .calendar-dates i{animation:copy-in .3s calc(3s + var(--check)*.25s) both}
  .seen .benefit-6 .separate-people{animation:merge-people .8s 7s both}
- .seen .benefit-6>.illustrated-node .tile-art{animation:copy-in .3s 7.7s both}
+ .seen .benefit-6>.illustrated-node .tile-draw{animation:copy-in .3s 7.7s both}
  .seen .sound-lines{animation:sound-pulse .8s 9s both}
  .seen .growth-arrow path{stroke-dasharray:1;animation:thread-draw .65s 10s both}
  .seen .benefit-leads .paper-email{animation:copy-in .4s 11s both}
@@ -157,7 +156,12 @@
 @keyframes copy-in{from{opacity:0}to{opacity:1}}
 @keyframes card-float{from{transform:translate(0,0) rotate(-.6deg) scale(1)}to{transform:translate(5px,-18px) rotate(.9deg) scale(1.03)}}
 @keyframes thread-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@keyframes vertical-turn{from{transform:rotateX(0)}to{transform:rotateX(360deg)}}
+@keyframes spin-y{from{transform:perspective(400px) rotateY(0)}to{transform:perspective(400px) rotateY(360deg)}}
+@keyframes wipe-in{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes flap-cycle{0%,100%{transform:perspective(300px) rotateX(0)}27%,73%{transform:perspective(300px) rotateX(-165deg)}}
+@keyframes letter-in{0%{opacity:1;transform:translateY(-46%) scale(.55)}100%{opacity:1;transform:translateY(12%) scale(.55)}}
+@keyframes seal-fill{to{fill:#386f65}}
+@keyframes seal-ink{to{stroke:#f4e6ce}}
 @keyframes envelope-send{0%,100%{transform:translate(0,0);opacity:1}45%{transform:translate(22px,-14px);opacity:0}55%{transform:translate(-12px,8px);opacity:0}}
 @keyframes merge-people{0%{opacity:1;transform:scale(1)}85%{opacity:1;transform:scale(.4)}100%{opacity:0;transform:scale(.4)}}
 @keyframes leads-merge{0%{opacity:1;transform:scale(1)}80%{opacity:1;transform:scale(.35)}100%{opacity:0;transform:scale(.35)}}
@@ -165,12 +169,13 @@
 @keyframes scheduled-out{to{opacity:0;height:0;overflow:hidden}}
 @media(prefers-reduced-motion:reduce){
  .hero-threads path{stroke-dasharray:none;stroke-dashoffset:0}
- .checks-mask path,.complete-mask path,.task-check{stroke-dasharray:none;stroke-dashoffset:0}
- .calendar-dates i{opacity:1}
  .separate-people{display:none}
  .scroll-cue i:before{transform:none}.scroll-cue i:after{top:38px}
  .text-process .process-stage-card.current,.text-process .process-stage-card:hover{transform:none;animation:none}
  .interruption{animation:none}
+ .calendar-marks path{stroke-dasharray:none;stroke-dashoffset:0}
+ .task-check{stroke-dasharray:none;stroke-dashoffset:0}
+ .node-seal circle{fill:#386f65}.node-seal path{stroke:#f4e6ce}
 }
 
 /* Keep overlays aligned with the existing illustrated ingredients. */

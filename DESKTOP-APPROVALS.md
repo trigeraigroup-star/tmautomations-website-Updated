@@ -25,3 +25,8 @@ Confirmed source: exec-db135f8b-0df0-493f-a975-443d648eb7f1.png.
 Built-in image edit removed only baked-in UI text and scroll icon for accessible HTML overlays.
 Result: public/images/hero-d.jpg (converted from the PNG export at quality 82 for load time) (exec-54c3e2a2-cf86-469c-a2ca-0960bbcbf0cb.png).
 Prompt: preserve approved hands, cards, notepad, threads and composition; remove logo/navigation/headline/body/scroll icon, filling only those areas with parchment.
+
+## Possibility scene (2026-09-07 comments)
+- Tiles rebuilt as paper + drawing layers from the same sheet; no cream squares.
+- Thread runs through the seal row and fills each seal; last becomes the check.
+- People: figure spins, paper stays. Tasks: sheet starts without checks; the original pencil checks wipe in. Schedule: three amber pencil circles drawn on real date cells. Updates: flap opens, the task sheet slides into the pocket, flap closes, envelope sends. Complete: ring only until the thread arrives, then the original check wipes in.
