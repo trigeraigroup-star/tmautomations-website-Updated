@@ -12,5 +12,5 @@ export function validateContact(values){
 }
 export async function submitContact(values){
  if(Object.keys(validateContact(values)).length) throw new Error('Please review the highlighted fields.');
- throw new Error('Email delivery is not connected yet. Your details have not been sent. Please email Michal@tmautomations.io or call (850) 775-6906.');
+ throw new Error('Email delivery is not connected yet. Your details have not been sent. Please call (850) 775-6906.');
 }

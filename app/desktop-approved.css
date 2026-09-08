@@ -48,6 +48,7 @@
 .priority-field input{width:19px;height:19px;accent-color:var(--teal)}
 .contact-intake{background:transparent}
 .contact{padding-top:65px}
+.contact-layout>div>p{white-space:pre-line;max-width:none}
 .contact .form-fields{gap:15px 20px}
 .contact .field input{min-height:42px}
 .contact .field textarea{min-height:85px}
