@@ -1,0 +1,259 @@
+{
+  "brand": "TMAutomations",
+  "cta": "Let’s connect",
+  "nav": [
+    {
+      "id": "approach",
+      "label": "Approach"
+    },
+    {
+      "id": "process",
+      "label": "Process"
+    },
+    {
+      "id": "work",
+      "label": "Work"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    }
+  ],
+  "hero": {
+    "title": "There’s another way this day could go.",
+    "body": "It’s all about connecting the pieces.",
+    "scroll": "Follow the thread"
+  },
+  "pressure": {
+    "title": "You know this day. You live it.",
+    "body": "A message. An invoice. Team questions.",
+    "objects": [
+      [
+        "Unread message",
+        "A client is waiting"
+      ],
+      [
+        "Invoice",
+        "Ready to send"
+      ],
+      [
+        "Quote",
+        "Needs a follow-up"
+      ],
+      [
+        "Team question",
+        "Who’s handling this after?"
+      ],
+      [
+        "Zoom meeting",
+        "Starts in 05:00"
+      ],
+      [
+        "Team question",
+        "Do you approve the updated version?"
+      ],
+      [
+        "Team question",
+        "Has the client replied?"
+      ],
+      [
+        "WhatsApp",
+        "23 unread messages"
+      ]
+    ],
+    "consequence": "By the time you reach the work that grows the business, the day is over."
+  },
+  "possibility": {
+    "title": "It doesn’t have to stay this way.",
+    "body": "The repetitive work can move in order - without someone pushing every step.",
+    "nodes": [
+      "Capture the request",
+      "Route the work",
+      "Keep people informed"
+    ]
+  },
+  "opportunity": {
+    "title": "Saving time is only the beginning.",
+    "body": "AI can improve how the business operates - and create new systems that help it grow.",
+    "branches": [
+      {
+        "title": "Run the business better",
+        "items": [
+          "Time back for meaningful work",
+          "Clearer team coordination",
+          "Fewer manual errors"
+        ]
+      },
+      {
+        "title": "Help the business grow",
+        "items": [
+          "More exposure and better marketing",
+          "Capture the right leads",
+          "Follow up and turn interest into action"
+        ]
+      }
+    ]
+  },
+  "approach": {
+    "title": "The right solution begins with understanding how your business works.",
+    "body": "You know your business. Your team knows the details. Together, we find where a better system can make a real difference.",
+    "accountability": "We work alongside your team, identify gaps, build solutions and stay accountable through implementation, adoption, and support.",
+    "alt": "Owner, team members and strategist working together around a paper workflow at a wooden table."
+  },
+  "process": {
+    "title": "The work process",
+    "steps": [
+      {
+        "title": "Discover & Prioritize",
+        "body": "We get to know your team and how the work happens today. Together, we identify gaps and opportunities, then prioritize by expected ROI.",
+        "note": "A clear plan for what matters most."
+      },
+      {
+        "title": "Build & Test",
+        "body": "We build the solution around your real workflow, test everyday scenarios and exceptions, and refine it with your team before launch.",
+        "note": "A working solution, tested with you."
+      },
+      {
+        "title": "Integrate & Support",
+        "body": "We connect your tools, help your team adopt the solution, and stay accountable through implementation, support, and monitoring.",
+        "note": "Support that continues after launch."
+      }
+    ]
+  },
+  "transformation": {
+    "title": "From manual coordination to intelligent flow.",
+    "body": "Automation handles the repetitive coordination. Your people retain judgment and control.",
+    "inputs": [
+      "Messages",
+      "Documents",
+      "Follow-ups"
+    ],
+    "controls": [
+      "Clear rules",
+      "Human decisions"
+    ],
+    "outputs": [
+      "Work routed",
+      "Updates shared",
+      "Next steps clear"
+    ],
+    "caption": "An illustrative workflow. Designed around your business."
+  },
+  "work": {
+    "title": "See what moved. Know what needs attention.",
+    "body": "A clear view of the work—so you can make decisions without chasing updates or carrying every unfinished task in your head.",
+    "states": [
+      {
+        "title": "Taken care of",
+        "tasks": [
+          "Client update sent",
+          "Invoice issued",
+          "Meeting scheduled",
+          "New leads captured",
+          "Project files organized"
+        ],
+        "note": "Completed work settles into place."
+      },
+      {
+        "title": "Moving forward",
+        "tasks": [
+          "Quote approved - follow-up scheduled",
+          "Proposal accepted - onboarding started",
+          "Payment received - order released",
+          "Brief approved - work assigned",
+          "Draft approved - delivery scheduled",
+          "Meeting completed - next steps assigned",
+          "Client reply received - next task created"
+        ],
+        "note": "The next step has a clear owner."
+      },
+      {
+        "title": "Your judgment needed",
+        "tasks": [
+          "Approve a discount request",
+          "Choose between two supplier quotes",
+          "Review a change to the project scope"
+        ],
+        "note": "Important decisions come back to you."
+      }
+    ],
+    "caption": "",
+    "proofTitle": "Real work. Real stories.",
+    "proofEmpty": "Client stories will be shared here as they become available."
+  },
+  "payoff": {
+    "title": "The workday ends when it should.",
+    "body": "Your business keeps moving - without asking you to carry every step.",
+    "alt": "Business owner closing a laptop and taking a bag toward a sunlit doorway at the end of the workday.",
+    "closing": "Tell us how your business works today. We’ll start there."
+  },
+  "contact": {
+    "title": "Let’s connect the pieces.",
+    "body": "Every business works differently. You know your business best. Together, we’ll connect the dots between how things work today and what could work better.",
+    "website": "www.TMAutomations.io",
+    "websiteHref": "https://www.TMAutomations.io",
+    "phone": "(850) 775-6906",
+    "phoneHref": "tel:+18507756906",
+    "address": "",
+    "addressLabel": "Address",
+    "formNotice": "",
+    "submit": "Let’s connect",
+    "pending": "Sending…",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your name",
+        "type": "text",
+        "autoComplete": "name",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "autoComplete": "email",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone",
+        "type": "tel",
+        "autoComplete": "tel",
+        "required": true
+      },
+      {
+        "name": "company",
+        "label": "Company name",
+        "type": "text",
+        "autoComplete": "organization",
+        "required": false
+      },
+      {
+        "name": "businessType",
+        "label": "Business type",
+        "type": "text",
+        "autoComplete": "off",
+        "required": false
+      },
+      {
+        "name": "employees",
+        "label": "Number of employees",
+        "type": "number",
+        "autoComplete": "off",
+        "required": false
+      },
+      {
+        "name": "message",
+        "label": "Anything you’d like us to know before our first conversation?",
+        "type": "textarea",
+        "autoComplete": "off",
+        "required": false
+      }
+    ],
+    "email": "Michal@tmautomations.io",
+    "success": "Thanks for reaching out. We’ll be in touch soon."
+  },
+  "caseStudies": [],
+  "testimonials": [],
+  "footer": "Practical systems. Human partnership."
+}

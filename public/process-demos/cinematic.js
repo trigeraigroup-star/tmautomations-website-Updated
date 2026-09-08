@@ -1,0 +1,14 @@
+const content=[
+ ['We find the opportunity worth pursuing.','We observe how your team works, identify gaps and repetitive tasks, and prioritize the opportunities by expected ROI.'],
+ ['We turn that opportunity into a working solution.','We design and build around your workflow, test real scenarios and exceptions, and correct issues before reviewing the result with you.'],
+ ['We bring it into your team’s daily work.','We connect your tools, support adoption, monitor performance, and keep improving as your business changes.']
+];
+const tabs=[...document.querySelectorAll('[role=tab]')],scene=document.querySelector('.scene'),panel=document.querySelector('article'),status=document.querySelector('.status'),toggle=document.querySelector('.play');
+const duration=6500;let active=0,timer=0,start=0,remaining=duration,playing=false;
+function show(i){active=i;scene.dataset.stage=String(i);tabs.forEach((t,j)=>{t.setAttribute('aria-selected',String(j===i));t.tabIndex=j===i?0:-1});panel.setAttribute('aria-labelledby','tab'+i);panel.querySelector('.lead').textContent=content[i][0];panel.querySelector('.support').textContent=content[i][1];panel.classList.remove('text-enter');void panel.offsetWidth;panel.classList.add('text-enter')}
+function schedule(){start=performance.now();timer=setTimeout(()=>{if(active===2){playing=false;toggle.textContent='Play';status.textContent='Choose any stage to explore it.';return}show(active+1);remaining=duration;schedule()},remaining)}
+function pause(manual=false){clearTimeout(timer);if(playing)remaining=Math.max(0,remaining-(performance.now()-start));playing=false;scene.classList.add('paused');toggle.textContent='Play';status.textContent=manual?'Stage selected · take your time reading.':'Paused'}
+function play(){if(active===2&&remaining<=0)show(0);scene.classList.remove('paused');playing=true;toggle.textContent='Pause';status.textContent='Playing the process story';schedule()}
+function select(i){pause(true);show(i);remaining=duration;scene.classList.remove('paused')}
+tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>select(i));tab.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%3;else if(e.key==='ArrowLeft')n=(i+2)%3;else if(e.key==='Home')n=0;else if(e.key==='End')n=2;else return;e.preventDefault();select(n);tabs[n].focus()})});
+toggle.addEventListener('click',()=>playing?pause():play());document.querySelector('.replay').addEventListener('click',()=>{clearTimeout(timer);show(0);remaining=duration;scene.classList.remove('paused');const animated=scene.querySelectorAll('svg path,svg g');animated.forEach(e=>{e.style.animation='none'});void scene.offsetWidth;animated.forEach(e=>{e.style.animation=''});play()});document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)pause()});show(0);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)play();else{status.textContent='Choose a stage to explore it.';toggle.textContent='Play'}

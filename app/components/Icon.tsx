@@ -1,0 +1,1 @@
+export default function Icon({kind='arrow'}:{kind?:string}){const paths:Record<string,string>={arrow:'M6 18 18 6M6 6h12v12',down:'M12 4v16M6 14l6 6 6-6',check:'m5 12 4 4L19 6',next:'M4 12h16m-6-6 6 6-6 6',attention:'M12 5v9M12 18v1'};return <svg className="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d={paths[kind]||paths.arrow}/></svg>;}

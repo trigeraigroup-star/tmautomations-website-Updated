@@ -1,0 +1,4 @@
+# Image provenance
+- collaboration.jpg: optimized from user-supplied AI concept reference `/Users/michal/.codex/generated_images/01a06dee-f807-7fc1-9948-0b956664c08a/exec-8a900eee-cdc6-4c22-baa9-d8c54677f283.png`. Approved aesthetic: peers collaborating around workflow; illustrative people, not claimed clients.
+- payoff.jpg: generated for this draft; source `output/imagegen/owner-time-back-editorial.png`. Prompt: Premium wide editorial photographic illustration of a small-business owner closing a laptop and picking up a bag beside an open sunlit doorway; organized oak desk, warm cream paper, sage, charcoal, subtle torn-paper and ink edges; left 40% empty for HTML headline; no text, logos, dashboards, or screen UI.
+- Both JPEGs encoded at quality 78 through sips; original 1672×941 dimensions retained. Raster assets contain no website copy.

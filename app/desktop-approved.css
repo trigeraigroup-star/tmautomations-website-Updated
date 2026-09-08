@@ -1,0 +1,184 @@
+/* Approved desktop refinement. Existing parchment, Barlow and palette retained. */
+.brand{color:#000}
+.scene-copy h2 span{display:block}
+.hero .scene-copy{left:9%;width:36%;top:49%}
+.hero h1{max-width:none;font-size:clamp(46px,4.5vw,76px);line-height:1.14}
+.hero .scene-copy p{max-width:none;font-size:clamp(19px,1.75vw,28px)}
+.hero-art{inset:0;width:100%;height:100%;aspect-ratio:1733/907}
+.hero-art>img{position:static;width:100%;height:100%;object-fit:contain;opacity:1;mask-image:none;mix-blend-mode:multiply}
+.hero-threads{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#70a898;stroke-width:3;pointer-events:none}
+.hero-threads path{stroke-dasharray:32 1200;stroke-dashoffset:1232}
+.seen .hero-threads path{animation:hero-flow 4s linear infinite}
+.hero:not(.in-view) .hero-threads path{animation-play-state:paused}
+@keyframes hero-flow{to{stroke-dashoffset:0}}
+.scroll-cue i{width:2px;height:38px;background:#386f6535;overflow:visible}
+.scroll-cue i:before{content:'';position:absolute;inset:0;background:var(--teal);transform-origin:top}
+.scroll-cue i:after{width:7px;height:7px;left:-2.5px;top:0;bottom:auto;border:0;background:var(--teal)}
+.in-view .scroll-cue i:before{animation:cue-line 1.8s linear infinite}
+.in-view .scroll-cue i:after{animation:cue-pulse 1.8s linear infinite}
+@keyframes cue-line{0%{transform:scaleY(0)}90%,100%{transform:scaleY(1)}}
+@keyframes cue-pulse{0%{transform:translateY(0);opacity:1}90%{transform:translateY(38px);opacity:1}100%{transform:translateY(38px);opacity:0}}
+.approach .scroll-cue i:before,.approach .scroll-cue i:after{animation-delay:5.7s}
+.pressure .pressure-consequence{font-size:22px;max-width:290px;font-weight:500}
+.interruption-5{left:0;top:6%;width:210px}
+.interruption-6{right:1%;top:9%;width:190px}
+.interruption-7{left:35%;bottom:0;width:190px}
+.whatsapp-icon{width:36px;flex-shrink:0}
+.tile-wrap{display:block;position:relative;width:100%;aspect-ratio:1}
+.checks-mask{position:absolute;left:25%;top:25%;width:19%;height:48%;background:#e9d7b2 url('/images/parchment.jpg') center/500px;display:flex;flex-direction:column}
+.checks-mask svg{height:33%;width:100%;fill:none;stroke:#386f65;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+.checks-mask path{stroke-dasharray:1;stroke-dashoffset:0}
+.complete-mask{position:absolute;left:27%;top:29%;width:48%;height:41%;background:#e9d7b2 url('/images/parchment.jpg') center/500px;border-radius:45%}
+.complete-mask svg{width:100%;height:100%;fill:none;stroke:#386f65;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.calendar-dates{position:absolute;left:32%;top:45%;display:flex;gap:9%;width:40%;height:17%}
+.calendar-dates i{width:26%;height:100%;border:2px solid #ad8042;border-radius:50%;opacity:0}
+.ordered-workflow>.ink-route{top:0;height:100%;z-index:1}
+.ordered-item{transform:none}
+.route-lead{display:none}
+.approach-thread .route-base{opacity:.15}
+.approach-thread .route-draw{stroke-width:3}
+.benefit{position:relative;flex:1;min-width:0;max-width:130px;text-align:center}
+.benefit>strong{font-size:16px;font-weight:400;display:block;line-height:1.2;margin-top:9px}
+.separate-people,.lead-people{position:absolute;display:flex;inset:10% 0 20%;gap:3px;z-index:2}
+.separate-people .illustrated-node{width:33%}
+.sound-lines,.growth-arrow{position:absolute;left:0;top:0;width:100%;aspect-ratio:1;fill:none;stroke:#386f65;stroke-width:2.4;pointer-events:none}
+.paper-email{aspect-ratio:1;background:#f4e6ce url('/images/parchment.jpg') center/500px;border:1px solid #958b70;border-radius:4px 7px 3px 6px;box-shadow:1px 3px 4px #5e482229;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:8px;color:var(--teal);font-size:13px;text-align:left}
+.paper-email .mail-subject{font-size:15px;border-bottom:1px solid #8b948073;padding-bottom:5px}
+.paper-email svg{fill:none;stroke:var(--teal);stroke-width:2}
+.benefit-leads .lead-people{opacity:0}
+.benefit-followup .scheduled{display:none}
+.priority-field{grid-column:1/-1}
+.priority-field legend{font-size:17px;margin-bottom:10px}
+.priority-field>div{display:flex;gap:30px}
+.priority-field label{display:flex;align-items:center;gap:9px}
+.priority-field input{width:19px;height:19px;accent-color:var(--teal)}
+.contact-intake{background:transparent}
+.contact{padding-top:65px}
+.contact .form-fields{gap:15px 20px}
+.contact .field input{min-height:42px}
+.contact .field textarea{min-height:85px}
+.ledger-column ul{list-style:none;margin:0;padding:8px 16px 12px;flex:1}
+.ledger-column{display:flex;flex-direction:column}
+.ledger-task{display:flex;align-items:flex-start;gap:10px;padding:8px 0;line-height:1.2;font-size:17px}
+.task-box{width:23px;height:23px;flex-shrink:0;fill:none;stroke:var(--teal);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ledger-column h3{font-size:22px;min-height:57px}
+.task-check{stroke-width:2.2;stroke-dasharray:1;stroke-dashoffset:0}
+@media(min-width:801px){
+ .hero .scene-composition{width:min(1733px,100%);height:calc(100svh - 120px);min-height:0}
+ .hero .scene-stage{padding-bottom:48px}
+ .hero .scroll-cue{bottom:5px}
+ .hero-art{height:100%}
+ .opportunity .scene-copy{top:6%;width:45%}
+ .opportunity .scene-copy h2{max-width:none}
+ .opportunity .scene-copy p{max-width:470px}
+ .opportunity-input{top:48%;width:43%}
+ .opportunity-row.operations{top:24%;width:40%}
+ .opportunity-row.growth{top:68%;width:48%}
+ .collaboration-image{left:27%;width:73%;mask-image:none;top:10%;height:80%}
+ .collaboration-image img{position:static;object-fit:contain;transform:none}
+ .collaboration-image>.ink-route{inset:0;height:100%}
+ .approach .scene-copy{width:28%}
+ .approach .scene-copy h2{font-size:clamp(35px,3.1vw,52px)}
+ .approach .scene-copy p{max-width:330px;font-size:19px}
+ .work .scene-copy{position:relative;top:auto;left:auto;transform:none;width:100%;display:flex;justify-content:space-between;align-items:center;padding:25px 5% 20px}
+ .work .scene-copy h2{font-size:clamp(30px,3vw,44px)}
+ .work .scene-copy p{margin:0;font-size:19px}
+ .work-ledger{position:relative;inset:auto;width:90%;margin:auto}
+ .ledger-columns{min-height:360px}
+ .ledger-column>p{font-size:16px;margin-top:auto}
+ .motion-ready .scene.work{height:calc(100svh - 72px)}
+ .work .scene-stage{position:relative;top:0;min-height:calc(100svh - 72px)}
+ .work .scene-composition{min-height:0;height:auto;overflow:visible}
+ .text-process{height:calc(100svh - 72px);min-height:590px;padding:20px 0 30px;display:flex;align-items:center}
+ .text-process-content{max-width:1150px}
+ .text-process h2{margin-bottom:22px;font-size:clamp(34px,3vw,46px)}
+ .text-process .process-stage-stack{max-width:1000px}
+ .text-process .process-stage-card{display:grid;grid-template-columns:35px 235px 1fr;grid-template-rows:auto auto;column-gap:18px;row-gap:7px;min-height:0;padding:18px 25px}
+ .text-process .process-stage-card .process-stage-number{grid-column:1;grid-row:1/3;align-self:center;margin:0}
+ .text-process .process-stage-card h3{grid-column:2;grid-row:1/3;align-self:center;font-size:28px}
+ .text-process .process-stage-card .process-stage-body{grid-column:3;margin:0;padding:0;font-size:18px;line-height:1.35}
+ .text-process .process-stage-card .process-stage-result{grid-column:3;margin:0;padding-top:6px;font-size:16px}
+ .text-process .process-stage-thread{height:22px;--thread:1}
+ .text-process .process-stage-card.current{transform:translateY(-6px)}
+ .text-process .process-stage-card:hover{transform:translateY(-8px)}
+ .text-process .process-stage-card{--breathing:running}
+ .text-process:not(.in-view) .process-stage-card{--breathing:paused}
+}
+@media(min-width:801px) and (max-height:760px){
+ .ledger-task{font-size:16px;padding:5px 0}
+ .ledger-columns{min-height:0}
+ .work .scene-copy{padding-top:10px;padding-bottom:12px}
+ .ledger-column h3{font-size:20px;min-height:45px;padding:10px 12px}
+ .work .scene-copy h2{font-size:32px}
+ .text-process{min-height:520px;padding-block:12px}
+ .text-process .process-stage-card{padding:12px 20px}
+ .text-process .process-stage-card .process-stage-body{font-size:17px}
+ .text-process .process-stage-card h3{font-size:25px}
+ .text-process h2{margin-bottom:16px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .motion-ready .scene:not(.seen) .scene-copy,.motion-ready .contact:not(.seen) h2,.motion-ready .contact:not(.seen) .contact-layout>div>p{opacity:0}
+ .seen .scene-copy h2,.contact.seen h2{animation:copy-in .35s both}
+ .seen .scene-copy>p,.contact.seen .contact-layout>div>p{animation:copy-in .35s .22s both}
+ .pressure.seen h2 span:first-child,.work.seen h2 span:first-child{animation:copy-in .3s both}
+ .pressure.seen h2 span:last-child,.work.seen h2 span:last-child{animation:copy-in .3s .2s both}
+ .pressure.seen .scene-copy>p,.work.seen .scene-copy>p{animation-delay:.4s}
+ .pressure.seen .pressure-consequence{animation-delay:.65s}
+ .motion-ready .scene:not(.seen) .interruption{opacity:0}
+ .seen .interruption{animation:copy-in .35s calc(.7s + var(--bubble,0)*.4s) both}
+ .interruption-0{--bubble:0}.interruption-1{--bubble:1}.interruption-2{--bubble:2}.interruption-3{--bubble:3}.interruption-4{--bubble:4}.interruption-5{--bubble:5}.interruption-6{--bubble:6}.interruption-7{--bubble:7}
+ .seen .route-draw{animation:thread-draw 5s .5s both;stroke-dasharray:1}
+ .ordered-workflow .route-draw{animation-timing-function:steps(5,end)}
+ .opportunity.seen .opportunity-art>.ink-route .route-draw{animation-delay:5s;animation-duration:6s}
+ .motion-ready .scene:not(.seen) .route-draw{stroke-dashoffset:1}
+ .seen .action-0 .tile-art{animation:vertical-turn .7s 1s both}
+ .seen .action-3 .tile-wrap{animation:envelope-send .8s 4s both}
+ .seen .action-4 .tile-wrap{animation:vertical-turn .7s 5s both}
+ .seen .action-1 .checks-mask path{animation:thread-draw .28s calc(2s + var(--check)*.25s) both}
+ .seen .action-4 .complete-mask path{animation:thread-draw .4s 5.35s both}
+ .motion-ready .scene:not(.seen) .checks-mask path,.motion-ready .scene:not(.seen) .complete-mask path{stroke-dashoffset:1;stroke-dasharray:1}
+ .seen .calendar-dates i{animation:copy-in .3s calc(3s + var(--check)*.25s) both}
+ .seen .benefit-6 .separate-people{animation:merge-people .8s 7s both}
+ .seen .benefit-6>.illustrated-node .tile-art{animation:copy-in .3s 7.7s both}
+ .seen .sound-lines{animation:sound-pulse .8s 9s both}
+ .seen .growth-arrow path{stroke-dasharray:1;animation:thread-draw .65s 10s both}
+ .seen .benefit-leads .paper-email{animation:copy-in .4s 11s both}
+ .seen .benefit-leads .lead-people{animation:leads-merge 1s 10.1s both}
+ .seen .benefit-followup .scheduled{display:block;animation:scheduled-out .2s 12s both}
+ .seen .benefit-followup .sent{animation:copy-in .3s 12s both}
+ .seen .benefit-followup .paper-email svg{animation:envelope-send .8s 12s both}
+ .seen .ledger-column h3{animation:copy-in .3s .6s both}
+ .motion-ready .work:not(.seen) .ledger-task{opacity:0}
+ .seen .ledger-task{animation:copy-in .22s var(--task-delay) both}
+ .seen .task-check{animation:thread-draw .24s calc(var(--task-delay) + .22s) both}
+ .motion-ready .work:not(.seen) .task-check{stroke-dashoffset:1}
+}
+@keyframes copy-in{from{opacity:0}to{opacity:1}}
+@keyframes thread-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes vertical-turn{from{transform:rotateX(0)}to{transform:rotateX(360deg)}}
+@keyframes envelope-send{0%,100%{transform:translate(0,0);opacity:1}45%{transform:translate(22px,-14px);opacity:0}55%{transform:translate(-12px,8px);opacity:0}}
+@keyframes merge-people{0%{opacity:1;transform:scale(1)}85%{opacity:1;transform:scale(.4)}100%{opacity:0;transform:scale(.4)}}
+@keyframes leads-merge{0%{opacity:1;transform:scale(1)}80%{opacity:1;transform:scale(.35)}100%{opacity:0;transform:scale(.35)}}
+@keyframes sound-pulse{0%{opacity:0}25%{opacity:1}50%{opacity:.3}75%,100%{opacity:1}}
+@keyframes scheduled-out{to{opacity:0;height:0;overflow:hidden}}
+@media(prefers-reduced-motion:reduce){
+ .hero-threads path{stroke-dasharray:none;stroke-dashoffset:0}
+ .checks-mask path,.complete-mask path,.task-check{stroke-dasharray:none;stroke-dashoffset:0}
+ .calendar-dates i{opacity:1}
+ .separate-people{display:none}
+ .scroll-cue i:before{transform:none}.scroll-cue i:after{top:38px}
+ .text-process .process-stage-card.current,.text-process .process-stage-card:hover{transform:none;animation:none}
+}
+
+/* Keep overlays aligned with the existing illustrated ingredients. */
+.separate-people{opacity:0}
+.benefit-growth:after{content:'';position:absolute;left:17%;top:12%;width:65%;height:38%;background:#ead9b7 url('/images/parchment.jpg') center/500px;z-index:1}
+.benefit-growth .growth-arrow{z-index:2}
+.benefit-speaker:after{content:'';position:absolute;left:77%;top:12%;width:18%;height:44%;background:#ead9b7 url('/images/parchment.jpg') center/500px;z-index:1}
+.benefit-speaker .sound-lines{z-index:2}
+@media(prefers-reduced-motion:no-preference){
+ .seen .ordered-workflow .route-draw{animation-name:task-thread;animation-timing-function:linear}
+ .motion-ready .scene:not(.seen) .growth-arrow path{stroke-dasharray:1;stroke-dashoffset:1}
+ .seen .benefit-leads .paper-email span:not(.mail-subject){animation:copy-in .3s 11.3s both}
+}
+@keyframes task-thread{0%{stroke-dashoffset:1}10%,20%{stroke-dashoffset:.8}30%,40%{stroke-dashoffset:.6}50%,60%{stroke-dashoffset:.4}70%,80%{stroke-dashoffset:.2}90%,100%{stroke-dashoffset:0}}
