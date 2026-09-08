@@ -31,6 +31,8 @@
 .route-lead{display:none}
 .approach-thread .route-base{opacity:.15}
 .approach-thread .route-draw{stroke-width:2.3;opacity:.9}
+.payoff-thread .route-base{opacity:.15}
+.payoff-thread .route-draw{stroke-width:2.3;opacity:.9}
 .benefit{position:relative;flex:1;min-width:0;max-width:130px;text-align:center}
 .benefit>strong{font-size:16px;font-weight:400;display:block;line-height:1.2;margin-top:9px}
 .separate-people,.lead-people{position:absolute;display:flex;inset:10% 0 20%;gap:3px;z-index:2}

@@ -42,3 +42,6 @@ Prompt: preserve approved hands, cards, notepad, threads and composition; remove
 
 ## Work scene (2026-09-07 comments)
 - One compact sketched dashboard (pencil frame on parchment, ~880px): summary strip with pencil-circled counts 5 / 7 / 3, three hand-ruled columns, pencil check cutouts from the sheet. Body text sits under the headline, larger.
+
+## Payoff scene (2026-09-07 comments)
+- Thread runs laptop → notebooks and mug → along the desk → up the doorframe → ends in the doorway light. Photo anchored to its right edge so the door stays in frame. Glow tried and rejected; plain thread kept.
