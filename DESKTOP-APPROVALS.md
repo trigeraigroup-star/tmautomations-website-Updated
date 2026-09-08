@@ -23,5 +23,5 @@ Source: the user's pasted annotation export and subsequent chat approvals. Lates
 ## Hero asset
 Confirmed source: exec-db135f8b-0df0-493f-a975-443d648eb7f1.png.
 Built-in image edit removed only baked-in UI text and scroll icon for accessible HTML overlays.
-Result: public/images/hero-d.png (exec-54c3e2a2-cf86-469c-a2ca-0960bbcbf0cb.png).
+Result: public/images/hero-d.jpg (converted from the PNG export at quality 82 for load time) (exec-54c3e2a2-cf86-469c-a2ca-0960bbcbf0cb.png).
 Prompt: preserve approved hands, cards, notepad, threads and composition; remove logo/navigation/headline/body/scroll icon, filling only those areas with parchment.

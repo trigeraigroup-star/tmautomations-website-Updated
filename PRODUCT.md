@@ -33,8 +33,8 @@ Typical client work includes email follow-up, quotes, invoices, supplier coordin
 - All meaningful labels and story copy must remain semantic HTML rather than baked into video.
 - Videos will be muted, lazy-loaded WebM/MP4 with poster images; mobile will favor posters.
 - No pricing, fabricated metrics, invented ROI, fake testimonials, fake dashboards, or unsupported claims.
-- Primary CTA is “Book a Call.” The calendar URL remains an open content input.
-- Hero headline is “AI Automations, Built Around Your Business.”
+- Primary CTA is “Let’s connect,” targeting the on-page contact form (approved 2026-09-07).
+- Hero headline is “There’s another way this day could go.” (approved 2026-09-07).
 - Never use “AIOS” or “AI operating system.”
 
 ## Brand Commitments
