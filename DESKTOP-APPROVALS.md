@@ -17,7 +17,7 @@ Source: the user's pasted annotation export and subsequent chat approvals. Lates
 
 ## Explicitly deferred
 - Mobile adaptation.
-- Resend credentials, server delivery connection and delivery testing. Submit currently reports not sent; it does not send or falsely display success.
+- Resend credentials and a live delivery test (server route and adapter are in place as of 2026-09-07; without the key the form still reports not sent).
 - Public deployment.
 
 ## Hero asset

@@ -45,3 +45,6 @@ next-env.d.ts
 /output/
 /graphify-out/
 tsconfig.tsbuildinfo
+
+# local secrets for wrangler/vite dev (never commit)
+.dev.vars

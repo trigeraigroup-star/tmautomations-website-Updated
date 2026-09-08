@@ -21,16 +21,15 @@ Small illustration labels live in `Artwork.tsx`; process illustration introducti
 ## Real proof
 `caseStudies` and `testimonials` are intentionally empty. The Work section displays an honest availability note. When approved material exists, add real entries and a corresponding rendering component in the Work section. Suggested case-study fields: `title`, `challenge`, `solution`, `outcome`, `url`. Suggested testimonial fields: `quote`, `name`, `role`, `company`. Never publish illustrative metrics or identities as real proof.
 
-## Before enabling form delivery
-`app/lib/contact.mjs` is the isolated submission adapter. It currently rejects every valid request with an explicit “not connected” message and sends nothing. Visitors can call the phone link. Without JavaScript, the form is disabled and phone contact remains available.
+## Form delivery (Resend)
+`app/api/contact/route.ts` receives the form (POST JSON), rate-limits by IP (5 per 10 minutes, in-memory), drops honeypot submissions, and calls `deliverContact` in `app/lib/contact-server.mjs`, which validates again and posts to Resend. The browser adapter `app/lib/contact.mjs` shows success only after the server returns ok. Without `RESEND_API_KEY` the route answers 503 “not connected” and sends nothing.
 
-1. Choose and authorize a real submission provider or server endpoint.
-2. Implement server-side validation, length limits, spam/rate controls and provider error handling. Store credentials server-side, never in JSON or browser code.
-3. Replace `submitContact` with a POST to that endpoint. Normalize/trim the payload, validate again on the server, and only return success after the provider acknowledges receipt.
-4. Add a genuine success state in `Contact.tsx`, plus an integration test for success/failure. Preserve entered values on failure. Test actual delivery to the approved destination.
-5. Update `contact.formNotice`, publish the appropriate privacy information, and verify the address and domain before launch.
+Environment (server-side only, never in code or JSON):
+- `RESEND_API_KEY` — Resend API key.
+- `CONTACT_TO` — recipient, default michal@tmautomations.io.
+- `CONTACT_FROM` — sender on a verified domain, default `TMAutomations <hello@tmautomations.io>`.
 
-The `contact-intake` component with `data-intake="form"` is the future chatbot intake seam. No chatbot integration is present or necessary for this draft.
+Local: copy `.dev.vars.example` to `.dev.vars` (gitignored) and restart `npm run dev`. Production (Cloudflare Workers): `npx wrangler secret put RESEND_API_KEY` and set the two vars in the Worker settings. Verify tmautomations.io in Resend (DNS records) before using the hello@ sender; until then Resend only delivers from `onboarding@resend.dev` to the account owner.
 
 ## Checks
 Run `npm test`, `npm run lint`, `npx tsc --noEmit`, and `npm run build`. Confirm desktop/mobile layout and reduced motion after structural changes.

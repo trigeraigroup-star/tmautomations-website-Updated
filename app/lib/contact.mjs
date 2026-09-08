@@ -1,4 +1,4 @@
-/** Resend delivery intentionally deferred. Never claim success without confirmed delivery. */
+/** Browser adapter: posts to /api/contact, which delivers through Resend. Success only after the server confirms. */
 export function validateContact(values){
  /** @type {Record<string,string>} */
  const errors={};
@@ -12,5 +12,8 @@ export function validateContact(values){
 }
 export async function submitContact(values){
  if(Object.keys(validateContact(values)).length) throw new Error('Please review the highlighted fields.');
- throw new Error('Email delivery is not connected yet. Your details have not been sent. Please call (850) 775-6906.');
+ const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(values)});
+ const data=await res.json().catch(()=>({}));
+ if(!res.ok||!data.ok) throw new Error(data.error||'Unable to send. Please try again or call (850) 775-6906.');
+ return data;
 }

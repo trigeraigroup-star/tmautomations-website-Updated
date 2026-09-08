@@ -47,6 +47,7 @@
 .priority-field label{display:flex;align-items:center;gap:9px}
 .priority-field input{width:19px;height:19px;accent-color:var(--teal)}
 .contact-intake{background:transparent}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .contact{padding-top:65px}
 .contact-layout>div>p{white-space:pre-line;max-width:none}
 .contact .form-fields{gap:15px 20px}
