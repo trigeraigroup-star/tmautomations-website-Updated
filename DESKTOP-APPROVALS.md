@@ -39,3 +39,6 @@ Prompt: preserve approved hands, cards, notepad, threads and composition; remove
 
 ## Approach scene (2026-09-07 comments)
 - Thread is one smooth curve through the sketch nodes on the paper map (pen tip, circle, target, left document, folder, pie, centre document, bottom arrow, right circle, right document). No straight cuts, no corners.
+
+## Work scene (2026-09-07 comments)
+- One compact sketched dashboard (pencil frame on parchment, ~880px): summary strip with pencil-circled counts 5 / 7 / 3, three hand-ruled columns, pencil check cutouts from the sheet. Body text sits under the headline, larger.
