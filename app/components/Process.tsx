@@ -27,6 +27,7 @@ export default function Process(){
  <button type="button" className="stage-more" aria-haspopup="dialog" aria-expanded={open===index} aria-label={`${c.process.detailLabels.open}: ${item.title}`} onClick={e=>show(index,e.currentTarget)}>{c.process.detailLabels.open}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></article>
  {index<2&&<div className="process-stage-thread" aria-hidden="true"><svg viewBox="0 0 20 42"><path className="process-thread-base" d="M10 0V42"/><path className="process-thread-ink" d="M10 0V42"/></svg></div>}
  </Fragment>)}</div></div>
+ <a href="#transformation" className="scroll-cue"><span>Scroll to continue</span><i aria-hidden="true"/></a>
  {step&&<div className="stage-sheet-backdrop" onClick={close}><div className="stage-sheet" role="dialog" aria-modal="true" aria-labelledby="stage-sheet-title" onClick={e=>e.stopPropagation()}>
  <button ref={closeRef} type="button" className="stage-sheet-close" onClick={close} aria-label={c.process.detailLabels.close}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
  <span className="process-stage-number">{String((open as number)+1).padStart(2,'0')}</span>
