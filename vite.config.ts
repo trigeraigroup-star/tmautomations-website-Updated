@@ -14,6 +14,11 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
 
 const localBindingConfig = {
   name: 'tmautomations-website',
+  // Public hostnames. www is canonical; the bare domain redirects to it via a Cloudflare redirect rule.
+  routes: [
+    { pattern: 'www.tmautomations.io', custom_domain: true },
+    { pattern: 'tmautomations.io', custom_domain: true },
+  ],
   main: 'vinext/server/app-router-entry',
   compatibility_flags: ['nodejs_compat'],
   // Non-secret delivery settings; RESEND_API_KEY is a Worker secret (wrangler secret put).
