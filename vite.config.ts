@@ -13,8 +13,14 @@ const { d1, r2 } = hostingConfig;
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
 
 const localBindingConfig = {
+  name: 'tmautomations-website',
   main: 'vinext/server/app-router-entry',
   compatibility_flags: ['nodejs_compat'],
+  // Non-secret delivery settings; RESEND_API_KEY is a Worker secret (wrangler secret put).
+  vars: {
+    CONTACT_TO: 'michal@tmautomations.io,michal.triger@gmail.com',
+    CONTACT_FROM: 'TMAutomations <hello@tmautomations.io>',
+  },
   d1_databases: d1
     ? [
         {
