@@ -26,7 +26,7 @@ Small illustration labels live in `Artwork.tsx`; process illustration introducti
 
 Environment (server-side only, never in code or JSON):
 - `RESEND_API_KEY` — Resend API key.
-- `CONTACT_TO` — recipient, default michal@tmautomations.io.
+- `CONTACT_TO` — recipient(s), comma-separated, default michal@tmautomations.io.
 - `CONTACT_FROM` — sender on a verified domain, default `TMAutomations <hello@tmautomations.io>`.
 
 Local: copy `.dev.vars.example` to `.dev.vars` (gitignored) and restart `npm run dev`. Production (Cloudflare Workers): `npx wrangler secret put RESEND_API_KEY` and set the two vars in the Worker settings. Verify tmautomations.io in Resend (DNS records) before using the hello@ sender; until then Resend only delivers from `onboarding@resend.dev` to the account owner.

@@ -15,10 +15,10 @@ export function normalizeContact(values){
  return out;
 }
 export function buildEmail(values,env){
- const to=env.CONTACT_TO||'michal@tmautomations.io';
+ const to=String(env.CONTACT_TO||'michal@tmautomations.io').split(',').map(s=>s.trim()).filter(Boolean); // comma-separated list allowed
  const from=env.CONTACT_FROM||'TMAutomations <hello@tmautomations.io>';
  const lines=Object.entries(FIELD_LABELS).map(([k,label])=>{const v=Array.isArray(values[k])?values[k].join(', '):values[k];return v?`${label}: ${v}`:null;}).filter(Boolean);
- return {from,to:[to],reply_to:values.email,subject:`New enquiry from ${values.name}${values.company?` (${values.company})`:''}`,text:lines.join('\n')};
+ return {from,to,reply_to:values.email,subject:`New enquiry from ${values.name}${values.company?` (${values.company})`:''}`,text:lines.join('\n')};
 }
 export class ContactError extends Error{constructor(status,message){super(message);this.status=status;}}
 export async function deliverContact(rawValues,env,fetchImpl=fetch){

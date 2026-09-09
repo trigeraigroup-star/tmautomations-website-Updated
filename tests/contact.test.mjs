@@ -31,7 +31,7 @@ test('server delivery only succeeds after Resend acknowledges',async()=>{
  assert.match(body.text,/Biggest difference: Growth$/m);
  assert.doesNotMatch(body.text,/bogus/);
  await assert.rejects(deliverContact(values,{RESEND_API_KEY:'k'},async()=>({ok:false})),/could not send/);
- assert.equal(buildEmail(normalizeContact(values),{CONTACT_TO:'x@y.z'}).to[0],'x@y.z');
+ assert.deepEqual(buildEmail(normalizeContact(values),{CONTACT_TO:'x@y.z, a@b.c'}).to,['x@y.z','a@b.c']);
 });
 test('build and test receives half the process scroll duration',async()=>{
  const url=new URL('../app/lib/process.mjs',import.meta.url);
