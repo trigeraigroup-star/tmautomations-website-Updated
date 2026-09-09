@@ -9,6 +9,6 @@ The current authority is [the reference-led specification](docs/DESIGN-SPEC.md).
 - Composition: modest left-aligned headings integrated beside artwork; no oversized centered headings, generic card grids, or flat sage scene backgrounds.
 - Process: three text-only stages stacked vertically in outlined organic cards; hover/click/keyboard focus lifts the current stage. No illustrated build board (approved 2026-09-07).
 - Motion: native scrolling, sticky desktop scenes, staged ink drawing and a completed-state hold. Mobile and reduced motion do not require pinned sequences. No wheel interception.
-- Truthfulness: no fabricated proof, no delivery claim for the disconnected contact form, and no deployment implied by this local build.
+- Truthfulness: no fabricated proof, no delivery claim for the disconnected contact form, and the live site is https://www.tmautomations.io.
 
 See [editing instructions](docs/EDITING.md) for content, artwork, motion, and form integration boundaries.

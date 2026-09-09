@@ -18,7 +18,7 @@ Source: the user's pasted annotation export and subsequent chat approvals. Lates
 ## Explicitly deferred
 - Mobile adaptation.
 
-- Public deployment.
+
 
 ## Hero asset
 Confirmed source: exec-db135f8b-0df0-493f-a975-443d648eb7f1.png.
@@ -50,3 +50,9 @@ Prompt: preserve approved hands, cards, notepad, threads and composition; remove
 - Resend domain tmautomations.io verified (DKIM + SPF on send.). Sender TMAutomations <hello@tmautomations.io>; recipients michal@tmautomations.io and michal.triger@gmail.com; visitor email as reply-to.
 - Google Workspace hosts michal@tmautomations.io (MX smtp.google.com, SPF, Google DKIM, DMARC quarantine). Resend "Enable Receiving" stays off.
 - Two-recipient test delivered to both inboxes from the local dev server. Production still needs RESEND_API_KEY, CONTACT_TO and CONTACT_FROM set on the Cloudflare Worker.
+
+## Deployment (2026-09-09)
+- Live at https://www.tmautomations.io on Cloudflare Workers (worker tmautomations-website, account subdomain tmautomations). Bare domain 301s to www via a Cloudflare redirect rule.
+- DNS moved from GoDaddy to Cloudflare (arturo/jewel.ns.cloudflare.com); all mail records preserved; old parking A records and www CNAME removed.
+- Secrets: RESEND_API_KEY set with wrangler secret put; CONTACT_TO / CONTACT_FROM ship as vars from vite.config.ts. Live form test delivered.
+- Deploy: npm run build && npx wrangler deploy -c dist/server/wrangler.json
