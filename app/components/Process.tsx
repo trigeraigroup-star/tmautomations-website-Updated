@@ -22,8 +22,9 @@ export default function Process(){
  {c.process.steps.map((item,index)=><Fragment key={item.title}>
  <article className={`process-stage-card ${active===index?'current':''}`} onMouseEnter={()=>setHovered(index)} onFocus={()=>setHovered(index)} onBlur={()=>setHovered(null)}>
  <span className="process-stage-number">{String(index+1).padStart(2,'0')}</span>
- <h3><button type="button" aria-haspopup="dialog" aria-expanded={open===index} onClick={e=>show(index,e.currentTarget)}>{item.title}<span className="stage-more">{c.process.detailLabels.open}</span></button></h3>
- <p className="process-stage-body">{item.body}</p><p className="process-stage-result">{item.note}</p></article>
+ <h3>{item.title}</h3>
+ <p className="process-stage-body">{item.body}</p><p className="process-stage-result">{item.note}</p>
+ <button type="button" className="stage-more" aria-haspopup="dialog" aria-expanded={open===index} aria-label={`${c.process.detailLabels.open}: ${item.title}`} onClick={e=>show(index,e.currentTarget)}>{c.process.detailLabels.open}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button></article>
  {index<2&&<div className="process-stage-thread" aria-hidden="true"><svg viewBox="0 0 20 42"><path className="process-thread-base" d="M10 0V42"/><path className="process-thread-ink" d="M10 0V42"/></svg></div>}
  </Fragment>)}</div></div>
  {step&&<div className="stage-sheet-backdrop" onClick={close}><div className="stage-sheet" role="dialog" aria-modal="true" aria-labelledby="stage-sheet-title" onClick={e=>e.stopPropagation()}>
