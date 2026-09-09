@@ -1,0 +1,88 @@
+/* Mobile (≤800px): stacked scenes, same words, same paper. Every scene = copy above, artwork below, animations on arrival.
+   Loaded after desktop-approved.css so it can undo the desktop absolute positioning. */
+@media(max-width:800px){
+ .scroll-cue,.continuity-thread{display:none}
+ .scene-stage{padding:26px 0 30px;min-height:auto;position:static;height:auto}
+ .scene-composition{min-height:0;height:auto;padding:0 6%;overflow:visible}
+ .scene-copy,.hero .scene-copy,.pressure .scene-copy,.opportunity .scene-copy,.approach .scene-copy,.signature .scene-copy,.work .scene-copy,.payoff .scene-copy{position:relative;top:auto;left:auto;transform:none;width:100%;padding:0}
+ .scene-copy h1,.scene-copy h2,.work .scene-copy h2,.approach .scene-copy h2{font-size:clamp(34px,10vw,44px);max-width:none;line-height:1.08}
+ .scene-copy p,.hero .scene-copy p,.pressure .scene-copy p,.opportunity .scene-copy p,.approach .scene-copy p,.signature .scene-copy p,.payoff .scene-copy p,.work .scene-copy p{font-size:17px;max-width:none;margin-top:14px;line-height:1.5}
+ .pressure .pressure-consequence{font-size:19px;max-width:none;font-weight:500;margin-top:18px}
+ .work .scene-copy p{font-size:19px;font-weight:500}
+ /* Artwork frames: full-bleed, tall crops focused on the subject. */
+ .hero-art,.pressure-art,.collaboration-image,.transformation-art,.payoff-image{position:relative;left:auto;right:auto;top:auto;inset:auto;width:112%;margin:22px 0 0 -6%;height:auto;transform:none;z-index:0;overflow:hidden;mask-image:none;-webkit-mask-image:none}
+ .hero-art{aspect-ratio:3/4;margin-top:18px}
+ .hero-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;left:0;max-width:none;opacity:1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
+ .hero-threads{position:absolute;inset:0;width:100%;height:100%}
+ /* Pressure: the pile lands on him. Compact cards around the owner, face kept clear. */
+ .pressure-art{aspect-ratio:4/5}
+ .pressure-owner{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+ .interruption{width:150px;padding:7px 8px;gap:6px}
+ .interruption strong{font-size:14px;line-height:1.1}
+ .interruption small{font-size:12px;margin-top:3px;line-height:1.2}
+ .interruption>.illustrated-node{width:26px}
+ .whatsapp-icon{width:26px}
+ .interruption-0{top:3%;left:4%;width:140px}
+ .interruption-1{top:4%;right:3%;left:auto;width:120px}
+ .interruption-2{top:24%;right:2%;left:auto;width:120px}
+ .interruption-3{top:38%;left:2%;bottom:auto;width:150px}
+ .interruption-4{bottom:22%;right:2%;left:auto;width:130px}
+ .interruption-5{top:20%;left:3%;width:150px}
+ .interruption-6{bottom:40%;right:4%;left:auto;top:auto;width:150px}
+ .interruption-7{bottom:5%;left:22%;width:190px}
+ /* Possibility: five tiles stay one row; the seal thread collects them. */
+ .possibility-art{position:relative;width:100%;height:auto;transform:none;padding:26px 0 8px;margin-top:8px;display:block}
+ .possibility-art .drafting-fragments{inset:-20% -5%;opacity:.16}
+ .ordered-workflow{gap:4px}
+ .ordered-item{width:18%}
+ .illustrated-node strong{font-size:12px;margin-top:6px;max-width:none}
+ .node-stem{height:16px}.node-seal{width:22px;height:22px}
+ .ordered-workflow>.ink-route{height:22px}
+ /* Opportunity: the fork turns vertical. Input row on top, two columns below, threads run down through the tiles. */
+ .opportunity-art{position:relative;inset:auto;width:100%;height:auto;margin-top:18px;display:grid;grid-template-columns:1fr 1fr;column-gap:8%;row-gap:44px}
+ .opportunity-art .drafting-fragments{inset:0;opacity:.16}
+ .opportunity-input{position:relative;left:auto;top:auto;width:100%;grid-column:1/-1}
+ .opportunity-row,.opportunity-row.operations,.opportunity-row.growth{position:relative;top:auto;right:auto;left:auto;width:100%;display:flex;flex-direction:column;align-items:center;gap:38px}
+ .benefit{width:64%;max-width:96px}
+ .benefit>strong,.benefit .illustrated-node strong{font-size:13px}
+ .branch-threads{position:absolute;inset:0;z-index:0}
+ .opportunity-row,.opportunity-input{z-index:3}
+ /* Approach / Transformation / Payoff photos: tall crops with their threads mapped to the same crop. */
+ .collaboration-image{aspect-ratio:4/5}
+ .collaboration-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;transform:none}
+ .collaboration-image>.ink-route{inset:0;height:100%;top:0}
+ .transformation-art{aspect-ratio:4/3}
+ .transformation-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;mask-image:none;-webkit-mask-image:none}
+ .human-caption{position:absolute;left:0;right:0;bottom:0;padding:26px 6% 10px;text-align:center;font-size:17px;background:linear-gradient(180deg,transparent,#f4e6ce 70%)}
+ .payoff-image{aspect-ratio:4/5;margin-top:24px}
+ .payoff-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%;mask-image:none;-webkit-mask-image:none}
+ .closing{margin-top:22px}
+ /* Process */
+ .text-process{height:auto;min-height:0;padding:30px 0 20px;display:block}
+ .text-process .process-stage-card{display:flex;flex-direction:column;padding:20px 20px 16px;min-height:0}
+ .text-process .process-stage-card .process-stage-body{padding:0;font-size:17px}
+ .text-process .process-stage-card .process-stage-result{padding:8px 0 0;font-size:15px;margin-top:10px}
+ .process-stage-card .stage-more{position:static;align-self:flex-end;margin-top:10px}
+ .text-process .process-stage-card.current,.text-process .process-stage-card:hover{transform:none}
+ .stage-sheet-backdrop{padding:12px}
+ /* Work: one frame, summary strip on top, the three lists stacked. */
+ .motion-ready .scene.work,.work .scene-stage{height:auto;min-height:0}
+ .work-ledger,.work-ledger.dashboard{position:relative;width:100%;margin:22px 0 0}
+ .dash-summary{flex-wrap:wrap;gap:10px 18px;padding:12px 16px 10px}
+ .dash-count{font-size:14px;gap:8px}.dash-count .count{width:32px;height:32px;font-size:17px}
+ .ledger-columns,.ledger-columns{grid-template-columns:1fr}
+ .ledger-column{padding:12px 16px 14px}
+ .ledger-column+.ledger-column{border-left:0;border-top:1px solid #8c896c80}
+ .ledger-column h3{font-size:17px}
+ .ledger-task{font-size:15px;padding:5px 0}
+ /* Contact */
+ .contact{padding:50px 0;min-height:0}
+ .contact-success{min-height:0;padding:26px 22px;font-size:20px;gap:16px}
+ .contact-success .success-check{width:58px;height:58px}
+}
+
+@media(max-width:800px){
+ .opportunity.seen .branch-top{animation-name:branch-top-m}
+ .opportunity.seen .branch-bottom{animation-name:branch-bottom-m}
+ .anim-ready .opportunity:not(.seen) .branch-top,.anim-ready .opportunity:not(.seen) .branch-bottom{clip-path:inset(0 0 100% 0)}
+}
