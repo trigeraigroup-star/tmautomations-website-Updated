@@ -17,7 +17,6 @@ export default function BranchThreads(){
    const run=70;
    el.querySelectorAll('.branch-top path').forEach(p=>p.setAttribute('d',`M${fx.toFixed(1)} ${fy.toFixed(1)} H${(fx+run).toFixed(1)} C${(fx+run+65).toFixed(1)} ${fy.toFixed(1)} ${(fx+run+45).toFixed(1)} ${ty.toFixed(1)} ${(fx+run+125).toFixed(1)} ${ty.toFixed(1)} H${ex1.toFixed(1)}`));
    el.querySelectorAll('.branch-bottom path').forEach(p=>p.setAttribute('d',`M${fx.toFixed(1)} ${fy.toFixed(1)} H${(fx+run).toFixed(1)} C${(fx+run+50).toFixed(1)} ${fy.toFixed(1)} ${(fx+run+25).toFixed(1)} ${by.toFixed(1)} ${(fx+run+85).toFixed(1)} ${by.toFixed(1)} H${ex2.toFixed(1)}`));
-   el.style.setProperty('--fork',`${(100-fx/10).toFixed(1)}%`);
   };
   place();const ro=new ResizeObserver(place);ro.observe(art);return()=>ro.disconnect();
  },[]);
