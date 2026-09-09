@@ -47,6 +47,16 @@
 .priority-field label{display:flex;align-items:center;gap:9px}
 .priority-field input{width:19px;height:19px;accent-color:var(--teal)}
 .contact-intake{background:transparent}
+/* Transformation: copy sits at the vertical centre of the artwork; caption matches body size. */
+.signature .scene-copy{top:50%;transform:translateY(-50%)}
+.human-caption{font-size:18px}
+/* Success: a teal card takes the form's place with the pencil check. */
+.contact-success{display:flex;align-items:center;gap:22px;min-height:260px;padding:34px 36px;background:var(--teal);color:#fff4df;border-radius:23px 15px 25px 13px / 16px 24px 17px 22px;box-shadow:0 18px 34px #23463d40;font-size:24px;line-height:1.3;animation:success-in .5s cubic-bezier(.16,1,.3,1) both}
+.contact-success .success-check{flex-shrink:0;width:74px;height:74px;border-radius:50%;background:#f4e6ce url('/images/parchment.jpg') center/500px;position:relative;box-shadow:0 4px 10px #00000030}
+.contact-success .success-check:after{content:'';position:absolute;inset:8%;background:url('/images/tiles/draw4-v.png') center/150% no-repeat;mix-blend-mode:multiply}
+.contact-success strong{display:block;font-weight:500}
+@keyframes success-in{from{opacity:0;transform:scale(.92) translateY(10px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.contact-success{animation:none}}
 .trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .contact{padding-top:65px}
 .contact-layout>div>p{white-space:pre-line;max-width:none}

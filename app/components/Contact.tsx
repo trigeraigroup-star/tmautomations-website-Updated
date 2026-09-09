@@ -23,7 +23,7 @@ export default function Contact(){
  {f.type==='textarea'?<textarea id={f.name} name={f.name} rows={3} maxLength={5000} aria-invalid={!!errors[f.name]} aria-describedby={errors[f.name]?`${f.name}-error`:undefined}/>:<input id={f.name} name={f.name} type={f.type} required={f.required} autoComplete={f.autoComplete} min={f.type==='number'?0:undefined} step={f.type==='number'?1:undefined} maxLength={200} aria-invalid={!!errors[f.name]} aria-describedby={errors[f.name]?`${f.name}-error`:undefined}/>}
  {errors[f.name]&&<span className="field-error" id={`${f.name}-error`}>{errors[f.name]}</span>}</div>;
  }
- return <div className="contact-intake">{sent?<p role="status">{c.contact.success}</p>:<form onSubmit={submit} noValidate><fieldset disabled={!ready}><input className="trap" type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true"/><div className="form-fields">
+ return <div className="contact-intake">{sent?<div className="contact-success" role="status" aria-live="polite"><span className="success-check" aria-hidden="true"/><p><strong>{c.contact.success}</strong></p></div>:<form onSubmit={submit} noValidate><fieldset disabled={!ready}><input className="trap" type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true"/><div className="form-fields">
  {c.contact.fields.filter(f=>f.name!=='message').map(field)}
  <fieldset className="priority-field"><legend>Where could we make the biggest difference?</legend><div>{['Organization','Growth'].map(choice=><label key={choice}><input type="checkbox" name="priorities" value={choice}/>{choice}</label>)}</div></fieldset>
  {c.contact.fields.filter(f=>f.name==='message').map(field)}
