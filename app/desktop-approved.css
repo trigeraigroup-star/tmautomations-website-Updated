@@ -195,11 +195,11 @@
  .motion-ready .work:not(.seen) .task-check{clip-path:inset(0 100% 0 0)}
 }
 @keyframes copy-in{from{opacity:0}to{opacity:1}}
-@keyframes branch-top{0%{stroke-dashoffset:1}23%{stroke-dashoffset:.55}46%{stroke-dashoffset:.31}69%{stroke-dashoffset:.07}77%,100%{stroke-dashoffset:0}}
-@keyframes branch-bottom{0%{stroke-dashoffset:1}23%{stroke-dashoffset:.665}46%{stroke-dashoffset:.465}69%{stroke-dashoffset:.265}92%{stroke-dashoffset:.065}100%{stroke-dashoffset:0}}
+@keyframes branch-top{0%{stroke-dashoffset:1px}23%{stroke-dashoffset:0.55px}46%{stroke-dashoffset:0.31px}69%{stroke-dashoffset:0.07px}77%,100%{stroke-dashoffset:0px}}
+@keyframes branch-bottom{0%{stroke-dashoffset:1px}23%{stroke-dashoffset:0.665px}46%{stroke-dashoffset:0.465px}69%{stroke-dashoffset:0.265px}92%{stroke-dashoffset:0.065px}100%{stroke-dashoffset:0px}}
 @keyframes copy-out{to{opacity:0}}
 @keyframes card-float{from{transform:translate(0,0) rotate(-.6deg) scale(1)}to{transform:translate(5px,-18px) rotate(.9deg) scale(1.03)}}
-@keyframes thread-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes thread-draw{from{stroke-dashoffset:1px}to{stroke-dashoffset:0px}}
 @keyframes spin-y{from{transform:perspective(400px) rotateY(0)}to{transform:perspective(400px) rotateY(360deg)}}
 @keyframes wipe-in{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 @keyframes flap-cycle{0%,100%{transform:perspective(300px) rotateX(0)}27%,73%{transform:perspective(300px) rotateX(-165deg)}}
@@ -225,7 +225,7 @@
 @media(prefers-reduced-motion:no-preference){
  .seen .ordered-workflow .route-draw{animation-name:task-thread;animation-timing-function:linear}
 }
-@keyframes task-thread{0%,10%{stroke-dashoffset:1}25%,30%{stroke-dashoffset:.75}45%,50%{stroke-dashoffset:.5}65%,70%{stroke-dashoffset:.25}85%,100%{stroke-dashoffset:0}}
+@keyframes task-thread{0%,10%{stroke-dashoffset:1px}25%,30%{stroke-dashoffset:0.75px}45%,50%{stroke-dashoffset:0.5px}65%,70%{stroke-dashoffset:0.25px}85%,100%{stroke-dashoffset:0px}}
 
 /* Invoice / quote card icon: drawn SVG in the atlas tile style (no invoice tile exists in paper-objects.jpg). */
 .invoice-tile{display:block;width:100%;aspect-ratio:1;background:#ecdcbb url('/images/parchment.jpg') center/500px;border:1px solid #958b70;box-shadow:1px 2px 3px #5e482229}
