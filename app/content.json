@@ -106,19 +106,59 @@
       {
         "title": "Discover & Prioritize",
         "body": "We get to know your team and how the work happens today. Together, we identify gaps and opportunities, then prioritize by expected ROI.",
-        "note": "A clear plan for what matters most."
+        "note": "A clear plan for what matters most.",
+        "details": {
+          "slug": "discover",
+          "happens": [
+            "We start with a conversation about how your business runs day to day: who does what, which tools you use, where things get stuck.",
+            "We follow a few real tasks from start to finish, for example a quote, an invoice, or a client question, and note every place work waits, gets copied by hand, or depends on one person remembering.",
+            "We list the workflows that could be automated and weigh each one: how much time it costs you now, how often it happens, how easy it is to change.",
+            "We agree together on what comes first."
+          ],
+          "you": "Describe the day as it really is, not as it should be. Point to the tasks that eat the most time or cause the most mistakes. Give access to the tools involved.",
+          "get": "A written plan of what to automate first and why it’s worth it, with what each workflow needs from your tools and your people."
+        }
       },
       {
         "title": "Build & Test",
         "body": "We build the solution around your real workflow, test everyday scenarios and exceptions, and refine it with your team before launch.",
-        "note": "A working solution, tested with you."
+        "note": "A working solution, tested with you.",
+        "details": {
+          "slug": "build",
+          "happens": [
+            "We build the first workflow around your actual tools and your actual cases, including the messy ones: a missing field, a duplicate, a client who replies late.",
+            "We run it beside your current process, not instead of it, so nothing breaks while it’s being tuned.",
+            "Every step is checked with you before it runs on its own. Anything that involves money, commitments, or a client relationship comes back to you for a decision.",
+            "We adjust until your people trust it."
+          ],
+          "you": "Try it on live work. Tell us what feels wrong or slow. Approve each step before it goes fully automatic.",
+          "get": "A working automation, tested on your real work. You know exactly what it handles on its own and what still needs your say."
+        }
       },
       {
         "title": "Integrate & Support",
         "body": "We connect your tools, help your team adopt the solution, and stay accountable through implementation, support, and monitoring.",
-        "note": "Support that continues after launch."
+        "note": "Support that continues after launch.",
+        "details": {
+          "slug": "support",
+          "happens": [
+            "We connect the workflow to the tools your business uses every day and switch it on for real.",
+            "Your staff get short, plain-language guides for the parts that touch them.",
+            "We watch the first weeks closely: what ran, what stalled, what needs a tweak.",
+            "When your business changes, a new supplier, a new service, a new person, the workflow is updated to match."
+          ],
+          "you": "Keep running the business. Flag anything that looks off. Tell us when something new comes up.",
+          "get": "Everything connected and running, guides for your staff, and 60 days of free support after launch. Ongoing support after that is available for an additional fee."
+        }
       }
-    ]
+    ],
+    "detailLabels": {
+      "happens": "What happens",
+      "you": "What you do",
+      "get": "What you get",
+      "open": "See what happens in this stage",
+      "close": "Close"
+    }
   },
   "transformation": {
     "title": "From manual coordination to intelligent flow.",

@@ -3,4 +3,5 @@
 - payoff.jpg: generated for this draft; source `output/imagegen/owner-time-back-editorial.png`. Prompt: Premium wide editorial photographic illustration of a small-business owner closing a laptop and picking up a bag beside an open sunlit doorway; organized oak desk, warm cream paper, sage, charcoal, subtle torn-paper and ink edges; left 40% empty for HTML headline; no text, logos, dashboards, or screen UI.
 - Both JPEGs encoded at quality 78 through sips; original 1672×941 dimensions retained. Raster assets contain no website copy.
 - hero-d.jpg: approved hero export (see DESKTOP-APPROVALS.md), re-encoded from PNG at quality 82; no alpha needed.
+- build-board.jpg: faint drafting texture behind the workflow tiles (.drafting-fragments); keep.
 - tiles/: layered cutouts (paper*.png = torn paper, draw*.png = pencil drawing, plus draw1-v*, draw3-flap/body, draw4-ring/v sub-layers) extracted 2026-09-07 from the approved paper-objects sheet with luminance/flood-fill masks in the browser; no repainting. The flat sheet was removed from public/ (in git history as paper-objects.jpg).
