@@ -1,11 +1,9 @@
 'use client';
 import {useEffect,useRef} from 'react';
 import {Route} from './Artwork';
-/* The two Opportunity branches leave from the last seal of the workflow and pass through the tile rows.
-   Positions depend on the viewport, so paths are measured at runtime (and on resize).
-   Desktop: rows to the right, horizontal wipe with static keyframes. Phone: columns below, vertical wipe with
-   keyframes generated from the measured tile positions. */
-const STOPS_TOP=[23,46,69],STOPS_BOTTOM=[23,46,69,92];
+/* Opportunity threads. Desktop: from the last seal, a short run, then two branches through the rows (horizontal wipe,
+   static keyframes). Phone: one continuous serpentine — seal → down-left into row 1 → across → down-left into row 2 →
+   across — drawn as four pieces with keyframes generated from the measured tile positions. */
 export default function BranchThreads(){
  const ref=useRef<HTMLDivElement>(null);
  useEffect(()=>{
@@ -23,15 +21,19 @@ export default function BranchThreads(){
    const f=(n:number)=>n.toFixed(1);
    const set=(sel:string,d:string)=>el.querySelectorAll(sel).forEach(p=>p.setAttribute('d',d));
    if(mobile.matches){
-    const col=(tiles:HTMLElement[])=>{const xs=tiles.map(t=>vx(c(t)[0]));const ys=tiles.map(t=>vy(c(t)[1]));const x=xs.reduce((a,v)=>a+v,0)/xs.length;const end=vy(tiles[tiles.length-1].getBoundingClientRect().bottom);return {x,ys,end};};
-    const a=col(ops),g=col(gro);const run=fy+18;
-    set('.branch-top path',`M${f(fx)} ${f(fy)} V${f(run)} C${f(fx)} ${f(run+45)} ${f(a.x)} ${f(a.ys[0]-70)} ${f(a.x)} ${f(a.ys[0])} V${f(a.end)}`);
-    set('.branch-bottom path',`M${f(fx)} ${f(fy)} V${f(run)} C${f(fx)} ${f(run+45)} ${f(g.x)} ${f(g.ys[0]-70)} ${f(g.x)} ${f(g.ys[0])} V${f(g.end)}`);
-    const kf=(name:string,ys:number[],stops:number[],endAt:number)=>{const start=`inset(0 0 ${(100-fy/6).toFixed(1)}% 0)`;const frames=ys.map((y,i)=>`${stops[i]}%{clip-path:inset(0 0 ${(100-y/6).toFixed(1)}% 0)}`).join('');return `@keyframes ${name}{0%{clip-path:${start}}${frames}${endAt}%,100%{clip-path:inset(0 0 0 0)}}`;};
-    style.textContent=kf('branch-top-m',a.ys,STOPS_TOP,77)+kf('branch-bottom-m',g.ys,STOPS_BOTTOM,100);
+    const row=(tiles:HTMLElement[])=>({xs:tiles.map(t=>vx(c(t)[0])),y:vy(c(tiles[0])[1])});
+    const r1=row(ops),r2=row(gro);
+    const x1a=r1.xs[0],x1z=r1.xs[r1.xs.length-1],x2a=r2.xs[0],x2z=r2.xs[r2.xs.length-1];
+    set('.mconn-a path',`M${f(fx)} ${f(fy)} C${f(fx)} ${f(fy+(r1.y-fy)*.55)} ${f(x1a)} ${f(fy+(r1.y-fy)*.45)} ${f(x1a)} ${f(r1.y)}`);
+    set('.mrow-1 path',`M${f(x1a)} ${f(r1.y)} H${f(x1z)}`);
+    set('.mconn-b path',`M${f(x1z)} ${f(r1.y)} C${f(x1z)} ${f(r1.y+(r2.y-r1.y)*.55)} ${f(x2a)} ${f(r1.y+(r2.y-r1.y)*.45)} ${f(x2a)} ${f(r2.y)}`);
+    set('.mrow-2 path',`M${f(x2a)} ${f(r2.y)} H${f(x2z)}`);
+    const vert=(name:string,y0:number,y1:number)=>`@keyframes ${name}{from{clip-path:inset(0 0 ${(100-y0/6).toFixed(1)}% 0)}to{clip-path:inset(0 0 ${(100-y1/6-1).toFixed(1)}% 0)}}`;
+    const horiz=(name:string,xs:number[],stops:number[])=>{const at=(x:number)=>`clip-path:inset(0 ${(100-x/10).toFixed(1)}% 0 0)`;return `@keyframes ${name}{0%{${at(xs[0])}}${xs.map((x,i)=>`${stops[i]}%{${at(x+2)}}`).join('')}100%{${at(xs[xs.length-1]+3)}}}`;};
+    style.textContent=vert('mconn-a-k',fy,r1.y)+horiz('mrow-1-k',r1.xs,[17,58,100])+vert('mconn-b-k',r1.y,r2.y)+horiz('mrow-2-k',r2.xs,[12,41,71,100]);
    }else{
-    const row=(tiles:HTMLElement[])=>({y:vy(c(tiles[0])[1]),end:vx(tiles[tiles.length-1].getBoundingClientRect().right)});
-    const t=row(ops),g=row(gro);const run=70;
+    const rowD=(tiles:HTMLElement[])=>({y:vy(c(tiles[0])[1]),end:vx(tiles[tiles.length-1].getBoundingClientRect().right)});
+    const t=rowD(ops),g=rowD(gro);const run=70;
     set('.branch-top path',`M${f(fx)} ${f(fy)} H${f(fx+run)} C${f(fx+run+65)} ${f(fy)} ${f(fx+run+45)} ${f(t.y)} ${f(fx+run+125)} ${f(t.y)} H${f(t.end)}`);
     set('.branch-bottom path',`M${f(fx)} ${f(fy)} H${f(fx+run)} C${f(fx+run+50)} ${f(fy)} ${f(fx+run+25)} ${f(g.y)} ${f(fx+run+85)} ${f(g.y)} H${f(g.end)}`);
     style.textContent='';
@@ -39,5 +41,5 @@ export default function BranchThreads(){
   };
   place();const ro=new ResizeObserver(place);ro.observe(art);return()=>{ro.disconnect();style.remove();};
  },[]);
- return <div ref={ref} className="branch-threads"><Route className="branch-top" d="M392 399 H462 C527 399 507 189 587 189 H984"/><Route className="branch-bottom" d="M392 399 H462 C512 399 487 453 547 453 H984"/></div>;
+ return <div ref={ref} className="branch-threads"><Route className="branch-top desk-only" d="M392 399 H462 C527 399 507 189 587 189 H984"/><Route className="branch-bottom desk-only" d="M392 399 H462 C512 399 487 453 547 453 H984"/><Route className="mconn-a mob-only" d="M0 0"/><Route className="mrow-1 mob-only" d="M0 0"/><Route className="mconn-b mob-only" d="M0 0"/><Route className="mrow-2 mob-only" d="M0 0"/></div>;
 }
