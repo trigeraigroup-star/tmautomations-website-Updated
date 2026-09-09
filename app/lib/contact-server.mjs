@@ -27,6 +27,6 @@ export async function deliverContact(rawValues,env,fetchImpl=fetch){
  if(Object.keys(issues).length) throw new ContactError(400,'Please review the highlighted fields.');
  if(!env.RESEND_API_KEY) throw new ContactError(503,'Email delivery is not connected yet. Your details have not been sent. Please call (850) 775-6906.');
  const res=await fetchImpl('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify(buildEmail(values,env))});
- if(!res.ok){const detail=await res.text().catch(()=>'');console.error('[contact] Resend rejected the email',res.status,detail.slice(0,300));throw new ContactError(502,'We could not send your message right now. Please try again or call (850) 775-6906.');}
+ if(!res.ok){const detail=typeof res.text==='function'?await res.text().catch(()=>''):'';console.error('[contact] Resend rejected the email',res.status,detail.slice(0,300));throw new ContactError(502,'We could not send your message right now. Please try again or call (850) 775-6906.');}
  return {ok:true};
 }
