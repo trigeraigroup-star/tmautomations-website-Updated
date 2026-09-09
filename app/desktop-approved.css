@@ -169,6 +169,9 @@
  .seen .action-4 .draw4-v{animation:wipe-in .35s 5s both}
  .seen .ordered-item .node-seal circle{animation:seal-fill .3s calc(1s + var(--i)*1s) both}
  .seen .ordered-item .node-seal path{animation:seal-ink .3s calc(1s + var(--i)*1s) both}
+ /* Branch lines reveal with a horizontal wipe (WebKit paints dash-offset drawing of these stretched curves incorrectly). */
+ .branch-top .route-draw,.branch-bottom .route-draw{stroke-dasharray:none;stroke-dashoffset:0}
+ .motion-ready .opportunity:not(.seen) .branch-top .route-draw,.motion-ready .opportunity:not(.seen) .branch-bottom .route-draw{clip-path:inset(0 100% 0 0)}
  .opportunity.seen .branch-top .route-draw{animation:branch-top 6.5s 5s linear both}
  .opportunity.seen .branch-bottom .route-draw{animation:branch-bottom 6.5s 5s linear both}
  .motion-ready .scene:not(.seen) .route-draw{stroke-dashoffset:1}
@@ -195,8 +198,8 @@
  .motion-ready .work:not(.seen) .task-check{clip-path:inset(0 100% 0 0)}
 }
 @keyframes copy-in{from{opacity:0}to{opacity:1}}
-@keyframes branch-top{0%{stroke-dashoffset:1px}23%{stroke-dashoffset:0.55px}46%{stroke-dashoffset:0.31px}69%{stroke-dashoffset:0.07px}77%,100%{stroke-dashoffset:0px}}
-@keyframes branch-bottom{0%{stroke-dashoffset:1px}23%{stroke-dashoffset:0.665px}46%{stroke-dashoffset:0.465px}69%{stroke-dashoffset:0.265px}92%{stroke-dashoffset:0.065px}100%{stroke-dashoffset:0px}}
+@keyframes branch-top{0%{clip-path:inset(0 57% 0 0)}23%{clip-path:inset(0 35.8% 0 0)}46%{clip-path:inset(0 20.8% 0 0)}69%{clip-path:inset(0 5.7% 0 0)}77%,100%{clip-path:inset(0 0 0 0)}}
+@keyframes branch-bottom{0%{clip-path:inset(0 57% 0 0)}23%{clip-path:inset(0 43.8% 0 0)}46%{clip-path:inset(0 31.1% 0 0)}69%{clip-path:inset(0 18.4% 0 0)}92%{clip-path:inset(0 5.7% 0 0)}100%{clip-path:inset(0 0 0 0)}}
 @keyframes copy-out{to{opacity:0}}
 @keyframes card-float{from{transform:translate(0,0) rotate(-.6deg) scale(1)}to{transform:translate(5px,-18px) rotate(.9deg) scale(1.03)}}
 @keyframes thread-draw{from{stroke-dashoffset:1px}to{stroke-dashoffset:0px}}
