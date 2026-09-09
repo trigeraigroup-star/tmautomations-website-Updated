@@ -17,7 +17,7 @@ Source: the user's pasted annotation export and subsequent chat approvals. Lates
 
 ## Explicitly deferred
 - Mobile adaptation.
-- Resend credentials and a live delivery test (server route and adapter are in place as of 2026-09-07; without the key the form still reports not sent).
+
 - Public deployment.
 
 ## Hero asset
@@ -45,3 +45,8 @@ Prompt: preserve approved hands, cards, notepad, threads and composition; remove
 
 ## Payoff scene (2026-09-07 comments)
 - Thread runs laptop → notebooks and mug → along the desk → up the doorframe → ends in the doorway light. Photo anchored to its right edge so the door stays in frame. Glow tried and rejected; plain thread kept.
+
+## Contact delivery (verified 2026-09-09)
+- Resend domain tmautomations.io verified (DKIM + SPF on send.). Sender TMAutomations <hello@tmautomations.io>; recipients michal@tmautomations.io and michal.triger@gmail.com; visitor email as reply-to.
+- Google Workspace hosts michal@tmautomations.io (MX smtp.google.com, SPF, Google DKIM, DMARC quarantine). Resend "Enable Receiving" stays off.
+- Two-recipient test delivered to both inboxes from the local dev server. Production still needs RESEND_API_KEY, CONTACT_TO and CONTACT_FROM set on the Cloudflare Worker.
