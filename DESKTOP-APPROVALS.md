@@ -56,3 +56,7 @@ Prompt: preserve approved hands, cards, notepad, threads and composition; remove
 - DNS moved from GoDaddy to Cloudflare (arturo/jewel.ns.cloudflare.com); all mail records preserved; old parking A records and www CNAME removed.
 - Secrets: RESEND_API_KEY set with wrangler secret put; CONTACT_TO / CONTACT_FROM ship as vars from vite.config.ts. Live form test delivered.
 - Deploy: npm run build && npx wrangler deploy -c dist/server/wrangler.json
+
+## Mobile (2026-09-09)
+- ≤800px: stacked scenes, every scene keeps headline/body/extra lines above its artwork. No pinning, no scroll cues. Animations play once on arrival (anim-ready class).
+- Tall crops with threads mapped to the same crop (hero xMidYMid slice, approach xMidYMax slice, transformation xMidYMid slice, payoff xMaxYMid slice). Pressure keeps all eight cards on the owner. Opportunity fork turns vertical (BranchThreads measures columns, generates keyframes). Dashboard stacks inside one frame.
