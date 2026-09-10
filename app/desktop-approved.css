@@ -51,6 +51,7 @@
 .priority-field input{width:19px;height:19px;accent-color:var(--teal)}
 .contact-intake{background:transparent}
 .row-title{display:none}
+.contact-foot{display:none}
 .mob-only{display:none}
 @media(min-width:801px){.contact-close{display:none}}
 /* Transformation: copy sits at the vertical centre of the artwork; caption matches body size. */

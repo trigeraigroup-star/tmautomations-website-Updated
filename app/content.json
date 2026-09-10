@@ -111,7 +111,7 @@
           "slug": "discover",
           "happens": [
             "We start with a conversation about how your business runs day to day: who does what, which tools you use, where things get stuck.",
-            "We follow a few real tasks from start to finish, for example a quote, an invoice, or a client question, and note every place work waits, gets copied by hand, or depends on one person remembering.",
+            "We follow a few real tasks from start to finish, reviewing every step and note every place work waits, gets copied by hand, or depends on one person remembering.",
             "We list the workflows that could be automated and weigh each one: how much time it costs you now, how often it happens, how easy it is to change.",
             "We agree together on what comes first."
           ],
@@ -143,7 +143,7 @@
           "slug": "support",
           "happens": [
             "We connect the workflow to the tools your business uses every day and switch it on for real.",
-            "Your staff get short, plain-language guides for the parts that touch them.",
+            "Your staff get trained on the automation and get short, plain-language guides for the parts that involve them.",
             "We watch the first weeks closely: what ran, what stalled, what needs a tweak.",
             "When your business changes, a new supplier, a new service, a new person, the workflow is updated to match."
           ],

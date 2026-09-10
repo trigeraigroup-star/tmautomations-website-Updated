@@ -11,8 +11,7 @@
  .work .scene-copy p{font-size:19px;font-weight:500}
  /* Artwork frames: full-bleed, tall crops focused on the subject. */
  .hero-art,.pressure-art,.collaboration-image,.transformation-art,.payoff-image{position:relative;left:auto;right:auto;top:auto;inset:auto;width:112%;margin:22px 0 0 -6%;height:auto;transform:none;z-index:0;overflow:hidden;mask-image:none;-webkit-mask-image:none}
- .hero-art{aspect-ratio:10/11;margin-top:18px}
- .hero-art>img,.hero-threads{transform:translateX(-18%)}
+ .hero-art{aspect-ratio:1;margin-top:18px}
  .hero-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;left:0;max-width:none;opacity:1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
  .hero-threads{position:absolute;inset:0;width:100%;height:100%}
  /* Pressure: the pile lands on him. Compact cards around the owner, face kept clear. */
@@ -72,8 +71,8 @@
  .seen .benefit-followup .badge-clock{animation-delay:13.9s}
  .seen .benefit-followup .badge-check{animation-delay:14.1s}
  /* Approach / Transformation / Payoff photos: tall crops with their threads mapped to the same crop. */
- .collaboration-image{aspect-ratio:4/5}
- .collaboration-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;transform:none}
+ .collaboration-image{aspect-ratio:1}
+ .collaboration-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%;transform:none}
  .collaboration-image>.ink-route{inset:0;height:100%;top:0}
  .transformation-art{aspect-ratio:4/3}
  .transformation-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;mask-image:none;-webkit-mask-image:none}
@@ -106,6 +105,8 @@
  .contact-close{position:fixed;top:14px;right:14px;z-index:81;width:42px;height:42px;border:1px solid #4f6e6480;border-radius:50%;background:#f4e6ce;display:grid;place-items:center;cursor:pointer}
  .contact-close svg{width:18px;height:18px;fill:none;stroke:var(--teal);stroke-width:2;stroke-linecap:round}
  .contact:not(.open) .contact-close{display:none}
+ .contact-foot{display:flex;flex-direction:column;gap:8px;margin:34px 6% 0;padding-top:22px;border-top:1px solid #9c987866}
+ .contact-foot p{margin:0;color:var(--muted);font-size:16px}
  .contact-success{min-height:0;padding:26px 22px;font-size:20px;gap:16px}
  .contact-success .success-check{width:58px;height:58px}
 }
