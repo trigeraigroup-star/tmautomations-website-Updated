@@ -2,6 +2,9 @@
    Loaded after desktop-approved.css so it can undo the desktop absolute positioning. */
 @media(max-width:800px){
  .scroll-cue,.continuity-thread{display:none}
+ /* Copy is always readable on phones; only the artwork animates when it reaches the middle of the screen. */
+ .anim-ready .scene:not(.seen) .scene-copy,.anim-ready .contact:not(.seen) h2,.anim-ready .contact:not(.seen) .contact-layout>div>p{opacity:1}
+ .seen .scene-copy h2,.seen .scene-copy>p,.pressure.seen h2 span,.work.seen h2 span,.pressure.seen .pressure-consequence,.contact.seen h2,.contact.seen .contact-layout>div>p{animation:none}
  .scene-stage{padding:26px 0 30px;min-height:auto;position:static;height:auto}
  .scene-composition{min-height:0;height:auto;padding:0 6%;overflow:visible}
  .scene-copy,.hero .scene-copy,.pressure .scene-copy,.opportunity .scene-copy,.approach .scene-copy,.signature .scene-copy,.work .scene-copy,.payoff .scene-copy{position:relative;top:auto;left:auto;transform:none;width:100%;padding:0}
@@ -12,6 +15,7 @@
  /* Artwork frames: full-bleed, tall crops focused on the subject. */
  .hero-art,.pressure-art,.collaboration-image,.transformation-art,.payoff-image{position:relative;left:auto;right:auto;top:auto;inset:auto;width:112%;margin:22px 0 0 -6%;height:auto;transform:none;z-index:0;overflow:hidden;mask-image:none;-webkit-mask-image:none}
  .hero-art{aspect-ratio:1;margin-top:18px}
+ .hero-art>img,.hero-threads{transform:translateX(-11%)}
  .hero-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;left:0;max-width:none;opacity:1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
  .hero-threads{position:absolute;inset:0;width:100%;height:100%}
  /* Pressure: the pile lands on him. Compact cards around the owner, face kept clear. */
@@ -74,7 +78,7 @@
  .collaboration-image{aspect-ratio:1}
  .collaboration-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%;transform:none}
  .collaboration-image>.ink-route{inset:0;height:100%;top:0}
- .transformation-art{aspect-ratio:4/3}
+ .transformation-art{aspect-ratio:1672/941}
  .transformation-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;mask-image:none;-webkit-mask-image:none}
  .human-caption{position:absolute;left:0;right:0;bottom:0;padding:26px 6% 10px;text-align:center;font-size:17px;background:linear-gradient(180deg,transparent,#f4e6ce 70%)}
  .payoff-image{aspect-ratio:4/5;margin-top:24px}
