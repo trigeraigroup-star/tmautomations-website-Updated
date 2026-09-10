@@ -10,13 +10,15 @@ Start the preview with `npm run dev`, then open the Local URL it prints (normall
 - `app/components/Artwork.tsx`: reusable thread, paper objects and workflow diagrams.
 - `app/components/Process.tsx`: scroll/click/keyboard stages; all content renders before JavaScript enhancement.
 - `app/components/Motion.tsx`: visible-scene scroll progress and active navigation.
-- `app/globals.css`: color tokens, typography, layout, responsive and reduced-motion rules.
+- `app/globals.css`: color tokens, typography, base layout and reduced-motion rules.
+- `app/desktop-approved.css`: the approved desktop design (scene positions, tile animations, threads).
+- `app/mobile.css`: phone layout (≤800px): stacked scenes, tall crops with mapped threads, serpentine Opportunity thread, contact popup.
 - `app/layout.tsx`: search title and description.
 - `public/images`: compressed human illustrations, parchment texture, paper-object atlas, build board, and transformation artwork. Keep alt descriptions aligned with replacement artwork.
 
 `docs/DESIGN-SPEC.md` is the visual authority. `Scene.tsx` supplies the common scene frame; its `length` prop controls desktop scroll distance in viewport heights. `Motion.tsx` reserves the beginning for arrival and the end for a completed-state hold. Process timing is separate in `Process.tsx`.
 
-Small illustration labels live in `Artwork.tsx`; process illustration introductions and substep captions live in `Process.tsx`; the owner benefit lines live in `page.tsx`. These are editable text, not baked into images. Main business content remains in `content.json`. With JavaScript, process tabs work on mobile and desktop; without JavaScript all process panels render.
+Small illustration labels live in `Artwork.tsx`; process illustration introductions and substep captions live in `Process.tsx`; the owner benefit lines live in `page.tsx`. These are editable text, not baked into images. Main business content remains in `content.json`. Each stage has a detail sheet (`details` in content.json) opened by “More details”, with deep links `#process/discover|build|support`.
 
 ## Real proof
 `caseStudies` and `testimonials` are intentionally empty. The Work section displays an honest availability note. When approved material exists, add real entries and a corresponding rendering component in the Work section. Suggested case-study fields: `title`, `challenge`, `solution`, `outcome`, `url`. Suggested testimonial fields: `quote`, `name`, `role`, `company`. Never publish illustrative metrics or identities as real proof.

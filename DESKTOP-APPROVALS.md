@@ -60,3 +60,9 @@ Prompt: preserve approved hands, cards, notepad, threads and composition; remove
 ## Mobile (2026-09-09)
 - ≤800px: stacked scenes, every scene keeps headline/body/extra lines above its artwork. No pinning, no scroll cues. Animations play once on arrival (anim-ready class).
 - Tall crops with threads mapped to the same crop (hero xMidYMid slice, approach xMidYMax slice, transformation xMidYMid slice, payoff xMaxYMid slice). Pressure keeps all eight cards on the owner. Opportunity fork turns vertical (BranchThreads measures columns, generates keyframes). Dashboard stacks inside one frame.
+
+## Mobile rounds 2–4 (2026-09-09)
+- Animations start only when the scene artwork reaches the middle band of the screen. Copy is always visible on phones.
+- Opportunity on phones: one serpentine thread (seal → row 1 → row 2) with row titles; tiles animate on arrival.
+- Contact is a popup on phones (any #contact link), with the footer line at the bottom.
+- Hero: 5:6 frame, picture shifted so the middle card is centred. Approach: 1:1 right-anchored. Transformation: full flow visible. Payoff line: “Time for what matters.”
