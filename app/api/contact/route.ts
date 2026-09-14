@@ -2,7 +2,7 @@ import {deliverContact,rateLimited,ContactError} from '../../lib/contact-server.
 const MAX_BODY=16_000;
 export async function POST(request:Request){
  const ip=request.headers.get('cf-connecting-ip')??request.headers.get('x-forwarded-for')??'local';
- if(rateLimited(ip)) return Response.json({error:'Too many attempts. Please wait a few minutes or call (850) 775-6906.'},{status:429});
+ if(rateLimited(ip)) return Response.json({error:'Too many attempts. Please wait a few minutes or call (850) 775-6909.'},{status:429});
  const raw=await request.text();
  if(raw.length>MAX_BODY) return Response.json({error:'Please shorten your message.'},{status:413});
  let values:Record<string,unknown>;

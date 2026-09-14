@@ -56,7 +56,7 @@ Work with distinct layers: parchment; contextual drafting fragments; illustrated
 
 Reuse collaboration.jpg, payoff.jpg and the approved transformation source. New assets are limited to paper-object atlas, build board/hand, owner pressure illustration, and plain parchment. These provide actual materials instead of CSS imitations. Use CSS sprite windows for paper icons, live text for labels, preserve original generated masters outside the public bundle. Fonts are self-hosted with license.
 
-Contact facts: TMAutomations; www.TMAutomations.io; (850) 775-6906; address placeholder. Real proof and email delivery remain launch inputs. Future chatbot intake seam remains available; no chatbot is simulated.
+Contact facts: TMAutomations; www.TMAutomations.io; (850) 775-6909; address placeholder. Real proof and email delivery remain launch inputs. Future chatbot intake seam remains available; no chatbot is simulated.
 
 ## Acceptance and verification
 

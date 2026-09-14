@@ -9,7 +9,7 @@ test('approved content is centralized and has valid navigation destinations', ()
  assert.equal(c.hero.title,'There’s another way this day could go.');
  assert.equal(c.process.steps.length,3);
  assert.deepEqual(c.caseStudies,[]); assert.deepEqual(c.testimonials,[]);
- assert.equal(c.contact.phoneHref,'tel:+18507756906');
+ assert.equal(c.contact.phoneHref,'tel:+18507756909');
 });
 test('motion fallback and contact anchor exist',()=>{
  const page=readFileSync(new URL('../app/page.tsx',import.meta.url),'utf8');

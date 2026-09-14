@@ -14,6 +14,6 @@ export async function submitContact(values){
  if(Object.keys(validateContact(values)).length) throw new Error('Please review the highlighted fields.');
  const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(values)});
  const data=await res.json().catch(()=>({}));
- if(!res.ok||!data.ok) throw new Error(data.error||'Unable to send. Please try again or call (850) 775-6906.');
+ if(!res.ok||!data.ok) throw new Error(data.error||'Unable to send. Please try again or call (850) 775-6909.');
  return data;
 }

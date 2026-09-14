@@ -3,7 +3,7 @@
 Start the preview with `npm run dev`, then open the Local URL it prints (normally http://localhost:3000). Edits refresh automatically. Production is https://www.tmautomations.io on Cloudflare Workers; ship with `npm run build && npx wrangler deploy -c dist/server/wrangler.json` after `npx wrangler login`.
 
 ## Copy and contact
-`app/content.json` holds scene headings, paragraphs, navigation, process steps, contact details, form labels and empty proof collections. Keep JSON valid: double quotes, commas between entries, no trailing commas. The hero is intentionally provisional. Update `contact.address` when the correct address is supplied. The phone display and `phoneHref` are separate; retain `tel:+18507756906` unless the number changes. Every conversation CTA targets `#contact`.
+`app/content.json` holds scene headings, paragraphs, navigation, process steps, contact details, form labels and empty proof collections. Keep JSON valid: double quotes, commas between entries, no trailing commas. The hero is intentionally provisional. Update `contact.address` when the correct address is supplied. The phone display and `phoneHref` are separate; retain `tel:+18507756909` unless the number changes. Every conversation CTA targets `#contact`.
 
 ## Structure and styling
 - `app/page.tsx`: scene order and semantic page composition.
