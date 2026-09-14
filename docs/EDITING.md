@@ -21,7 +21,7 @@ Start the preview with `npm run dev`, then open the Local URL it prints (normall
 Small illustration labels live in `Artwork.tsx`; process illustration introductions and substep captions live in `Process.tsx`; the owner benefit lines live in `page.tsx`. These are editable text, not baked into images. Main business content remains in `content.json`. Each stage has a detail sheet (`details` in content.json) opened by “More details”, with deep links `#process/discover|build|support`.
 
 ## Real proof
-`caseStudies` and `testimonials` are intentionally empty. The Work section displays an honest availability note. When approved material exists, add real entries and a corresponding rendering component in the Work section. Suggested case-study fields: `title`, `challenge`, `solution`, `outcome`, `url`. Suggested testimonial fields: `quote`, `name`, `role`, `company`. Never publish illustrative metrics or identities as real proof.
+`testimonials` in content.json feeds the drifting stripe under the Work dashboard (`app/components/Testimonials.tsx`). Fields: `quote`, `name`, optional `role`, `company`. With an empty list nothing renders. `caseStudies` is reserved for later. Never publish illustrative metrics or identities as real proof.
 
 ## Form delivery (Resend)
 `app/api/contact/route.ts` receives the form (POST JSON), rate-limits by IP (5 per 10 minutes, in-memory), drops honeypot submissions, and calls `deliverContact` in `app/lib/contact-server.mjs`, which validates again and posts to Resend. The browser adapter `app/lib/contact.mjs` shows success only after the server returns ok. Without `RESEND_API_KEY` the route answers 503 “not connected” and sends nothing.

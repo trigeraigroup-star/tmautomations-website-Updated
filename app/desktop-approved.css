@@ -240,3 +240,21 @@
 .invoice-tile{display:block;width:100%;aspect-ratio:1;background:#ecdcbb url('/images/parchment.jpg') center/500px;border:1px solid #958b70;box-shadow:1px 2px 3px #5e482229}
 .invoice-tile svg{width:100%;height:100%;fill:none;stroke:#3f6d63;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .invoice-tile .invoice-sign{stroke-width:1.2}
+
+/* Testimonials: a slow horizontal stripe of torn-paper notes under the dashboard. Pauses on hover; static under reduced motion. */
+.proof-strip{width:90%;margin:34px auto 0}
+.proof-strip h3{font-size:22px;font-weight:400;margin:0 0 14px;color:var(--text)}
+.proof-track-wrap{overflow:hidden;padding:14px 0 18px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.proof-track{display:flex;gap:26px;width:max-content;margin:0;padding:0 13px;list-style:none;animation:proof-drift calc(var(--n,4)*11s) linear infinite}
+.proof-track-wrap:hover .proof-track,.proof-track-wrap:focus-within .proof-track{animation-play-state:paused}
+.work:not(.in-view) .proof-track{animation-play-state:paused}
+.proof-note{flex:0 0 340px;padding:22px 26px 20px;background:#f8ecd6 url('/images/parchment.jpg') center/620px;border:1px solid #8c896c80;box-shadow:0 10px 22px #57402522,0 2px 5px #5740251a;border-radius:23px 15px 25px 13px / 16px 24px 17px 22px}
+.proof-note.tilt-0{transform:rotate(-.7deg)}.proof-note.tilt-1{transform:rotate(.5deg) translateY(6px);border-radius:14px 25px 16px 23px / 23px 17px 25px 15px}.proof-note.tilt-2{transform:rotate(-.3deg) translateY(2px);border-radius:25px 17px 22px 15px / 17px 25px 15px 24px}
+.proof-note blockquote{margin:0}
+.proof-note p{margin:0;font-size:17px;line-height:1.45;color:var(--teal)}
+.proof-note footer{margin-top:14px;padding-top:10px;border-top:1px solid #8c896c55;display:flex;flex-direction:column;gap:2px}
+.proof-note strong{font-weight:500;color:var(--text);font-size:16px}
+.proof-note span{font-size:14px;color:var(--muted)}
+@keyframes proof-drift{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.proof-track{animation:none;width:auto;flex-wrap:wrap}.proof-track-wrap{mask-image:none;-webkit-mask-image:none}.proof-note.tilt-0,.proof-note.tilt-1,.proof-note.tilt-2{transform:none}}
+@media(min-width:801px){.motion-ready .scene.work{height:auto}.work .scene-stage,.motion-ready .work .scene-stage{height:auto;min-height:0;padding-bottom:120px}.work .scene-composition,.motion-ready .work .scene-composition{height:auto;overflow:visible}}
