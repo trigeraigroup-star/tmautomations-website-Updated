@@ -12,9 +12,9 @@ export default function Process(){
  const active=hovered??selected;
  // Deep link: #process/discover opens that stage sheet.
  useEffect(()=>{const sync=()=>{const m=location.hash.match(/^#process\/([a-z]+)$/);const i=m?slugs.indexOf(m[1]):-1;if(i>=0){setSelected(i);setOpen(i);const top=document.getElementById('process')?.getBoundingClientRect().top??0;window.scrollTo({top:scrollY+top-72,behavior:'instant'});}};sync();addEventListener('hashchange',sync);return()=>removeEventListener('hashchange',sync);},[]);
+ const close=()=>{setOpen(null);history.replaceState(null,'','#process');openerRef.current?.focus();};
+ const show=(i:number,el:HTMLElement)=>{openerRef.current=el;setSelected(i);setOpen(i);history.replaceState(null,'','#process/'+slugs[i]);};
  useEffect(()=>{if(open===null)return;closeRef.current?.focus();const key=(e:KeyboardEvent)=>{if(e.key==='Escape')close();};addEventListener('keydown',key);document.body.style.overflow='hidden';return()=>{removeEventListener('keydown',key);document.body.style.overflow='';};},[open]);
- function show(i:number,el:HTMLElement){openerRef.current=el;setSelected(i);setOpen(i);history.replaceState(null,'','#process/'+slugs[i]);}
- function close(){setOpen(null);history.replaceState(null,'','#process');openerRef.current?.focus();}
  const step=open===null?null:c.process.steps[open];
  // Spatial animation is disabled by prefers-reduced-motion in Process.css.
  return <section id="process" className="text-process" data-motion aria-labelledby="process-title">

@@ -1,0 +1,110 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:"Barlow Semi Condensed";src:url("../public/fonts/barlow-semi-condensed-regular.ttf");font-weight:400}@font-face{font-family:"Barlow Semi Condensed";src:url("../public/fonts/barlow-semi-condensed-medium.ttf");font-weight:500}@page{size:Letter;margin:0.55in}</style>
+<title>Invoice {{INVOICE_NO}} {{CLIENT}}</title>
+
+<style>
+  :root{
+    --paper:#f8ecd7; --cream:#f4e6ce; --teal:#386f65; --text:#223d36; --muted:#45645a; --line:rgba(139,148,128,.45);
+    color-scheme: light;
+  }
+  body{background:var(--paper);color:var(--text);font-family:"Barlow Semi Condensed",Barlow,"Arial Narrow",sans-serif;font-size:15px;line-height:1.45;margin:0;padding-block:32px;padding-inline:16px;-webkit-font-smoothing:antialiased}
+  .sheet{max-width:720px;margin:0 auto;background:var(--cream);padding:48px 44px 40px;box-shadow:0 1px 0 var(--line), 0 18px 40px -28px rgba(34,61,54,.45)}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;padding-bottom:22px;border-bottom:2px solid var(--teal)}
+  h1{font-size:34px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0;line-height:1}
+  .meta{display:grid;grid-template-columns:auto auto;gap:4px 16px;font-variant-numeric:tabular-nums}
+  .meta dt{margin:0;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:12px;padding-top:2px}
+  .meta dd{margin:0;text-align:right;font-weight:500}
+  .parties{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .parties h2,.block h2{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin:0 0 8px}
+  .parties p{margin:0;white-space:pre-line}
+  .parties a{color:var(--text);text-decoration:none}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-variant-numeric:tabular-nums}
+  th{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-align:left;padding:18px 0 8px;border-bottom:1px solid var(--line)}
+  td{padding:14px 0;vertical-align:top;border-bottom:1px solid var(--line)}
+  th.n,td.n{text-align:right;white-space:nowrap;padding-left:16px}
+  td.desc strong{display:block;font-weight:500}
+  td.desc span{color:var(--muted)}
+  tfoot td{border-bottom:0;padding:6px 0}
+  tfoot tr:first-child td{padding-top:14px}
+  tfoot .label{text-align:right;color:var(--muted);padding-left:16px}
+  tfoot .total td{border-top:2px solid var(--teal);padding-top:10px;font-weight:500;font-size:18px;color:var(--teal)}
+  tfoot .total .label{color:var(--teal)}
+  .blocks{display:grid;grid-template-columns:1fr 1.4fr;gap:28px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+  .block p{margin:0;color:var(--muted)}
+  .block p+p{margin-top:6px}
+  .block strong{color:var(--text);font-weight:500}
+  .thanks{margin-top:34px;color:var(--teal);font-weight:500;letter-spacing:.02em}
+  @media (max-width:560px){
+    .sheet{padding:32px 20px}
+    .parties,.blocks{grid-template-columns:1fr}
+    h1{font-size:28px}
+    .meta{width:100%}
+  }
+  @media print{
+    body{background:#fff;padding:0}
+    .sheet{box-shadow:none;max-width:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+
+<main class="sheet">
+  <header class="top">
+    <!-- logo slot: replace <h1> with <img src="../public/images/logo.svg" alt="TMAutomations" height="40"> once the logo is decided -->
+    <h1>Invoice</h1>
+    <dl class="meta">
+      <dt>Invoice #</dt><dd>{{INVOICE_NO}}</dd>
+      <dt>Date</dt><dd>{{DATE}}</dd>
+      <dt>Due</dt><dd>{{DUE_DATE}}</dd>
+    </dl>
+  </header>
+
+  <section class="parties">
+    <div>
+      <h2>From</h2>
+      <p>Michal Treiger consulting
+927 Kings Rd, West Hollywood, CA 90069
+<a href="mailto:michal.triger@gmail.com">michal.triger@gmail.com</a>
++1 (850) 775-6909</p>
+    </div>
+    <div>
+      <h2>Bill to</h2>
+      <p>{{CLIENT}}
+Attn: {{CLIENT_CONTACT}}
+{{CLIENT_ADDRESS}}
+<a href="mailto:{{CLIENT_EMAIL}}">{{CLIENT_EMAIL}}</a></p>
+    </div>
+  </section>
+
+  <table>
+    <thead>
+      <tr><th>Description</th><th class="n">Date</th><th class="n">Hours</th><th class="n">Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="desc"><strong>{{ITEM_TITLE}}</strong><span>{{ITEM_DETAIL}}</span></td>
+        <td class="n">{{ITEM_DATE}}</td>
+        <td class="n">{{HOURS}}</td>
+        <td class="n">{{AMOUNT}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="3" class="label">Subtotal</td><td class="n">{{AMOUNT}}</td></tr>
+      <tr><td colspan="3" class="label">Tax</td><td class="n">$0.00</td></tr>
+      <tr class="total"><td colspan="3" class="label">Total due</td><td class="n">{{AMOUNT}}</td></tr>
+    </tfoot>
+  </table>
+
+  <section class="blocks">
+    <div class="block">
+      <h2>Payment</h2>
+      <p><strong>Zelle:</strong> Trigermichal@gmail.com</p>
+      <p>Please reference invoice {{INVOICE_NO}}. Payment is due within 7 days of the invoice date.</p>
+    </div>
+    <div class="block">
+      <h2>Notes</h2>
+      <p>{{NOTES}}</p>
+    </div>
+  </section>
+
+  <p class="thanks">Thank you.</p>
+</main>
+</body></html>

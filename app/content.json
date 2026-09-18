@@ -295,5 +295,14 @@
   },
   "caseStudies": [],
   "testimonials": [],
-  "footer": "Practical systems. Human partnership."
+  "footer": "Practical systems. Human partnership.",
+  "healthCheck": {
+    "label": "Start here",
+    "title": "The Automation Health Check",
+    "body": "A free 30-minute call. We walk through two or three real tasks from your week and find the bottlenecks: the repetitive work that holds your team back, the manual overload, and the tasks that fall between the cracks.",
+    "get": "Within 3-5 days you receive a visual roadmap for each of the workflows worth automating first - and why.",
+    "note": "Free. No commitment. Yours to keep either way.",
+    "cta": "Book my Health Check",
+    "heroCta": "Free Health Check"
+  }
 }
