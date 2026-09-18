@@ -1,16 +1,20 @@
 # memory.md — TMAutomations website
 
-## Status (2026-09-17)
-- Live at https://www.tmautomations.io (Cloudflare Workers). Last deploy 2026-09-14 (phone number fix). Everything below is LOCAL + STAGED, not committed, not deployed.
+## Status (2026-09-17, 22:30)
+- Live at https://www.tmautomations.io (Cloudflare Workers). Deployed 2026-09-17 19:27 (commit 5db4fad, version a1f86303): Health Check pill + section,
+  five Services pages, copy edits up to Custom AI Agents FAQ 4. All routes verified 200 with new copy.
+- After that deploy: one more copy edit committed locally (Custom AI Agents "what you get" line) — NOT pushed, NOT deployed.
+- Michal's plan: he finishes commenting AI Marketing + SEO/AEO/Lead Gen, then we push + deploy again.
 - In progress: copy review of the Health Check offer + five Services pages via the annotation artifact
   https://claude.ai/artifact/GExxLQU4HPc62L3xCDbWcf (comments URL .../code/artifact/7b6c3b58-3641-4898-966b-be220eb96ed8).
   Michal comments line by line; each comment is applied to `app/content.json` / `app/services/data.ts`, the review page is rebuilt
   with `node <scratchpad>/build-copy-review.mjs <repo> <scratchpad>` and republished, reply + resolve in the thread.
-- Reviewed so far (2026-09-17 evening): Health Check, Workflow Automation, AI Assistants (all approved), Custom AI Agents (FAQs 2-4 done;
-  local/hosted merged into one question). Not yet reviewed: rest of Custom AI Agents, AI Marketing, SEO/AEO/Lead Gen. No open threads.
-- Committed 2026-09-17 (checks green); NOT deployed yet, live site still shows the 09-14 build.
+- Reviewed so far: Health Check, Workflow Automation, AI Assistants (all approved), Custom AI Agents (FAQs 2-4 + "you get" done;
+  local/hosted merged into one question, now 5 FAQs). Not yet reviewed: AI Marketing, SEO/AEO/Lead Gen. No open threads.
+- On resume: `ArtifactComments watch` on the artifact URL so new comments wake the session; rebuild script lives in the session scratchpad
+  (`build-copy-review.mjs`) — if the scratchpad is gone after restart, recreate it from app/content.json + app/services/data.ts (one <section> per page, one .line per copy key).
 
-## Staged work (uncommitted) — commit + deploy after Michal approves the copy
+## Shipped 2026-09-17 (commit 5db4fad)
 - Header: Services (hover menu) first, then Approach/Process/Work/Contact, then "Free Health Check" teal pill (top-right; mobile: pill beside brand, nav below).
 - Health Check note between Approach and Process (`healthCheck` in content.json).
 - Services: `app/services/{page,layout,data}.tsx|ts`, 5 pages (workflow-automation, ai-assistants, custom-ai-agents, ai-marketing, seo-aeo-lead-generation), `app/services.css`, shared `SiteHeader`/`SiteFooter`, FAQ JSON-LD, FAQ answers keep line breaks.
@@ -27,4 +31,4 @@
 - Dev server: `npm run dev` via preview_start "tmautomations-dev"; if port 3000 is dead, restart it.
 
 ## Open decisions
-- Testimonials: waiting on 4 real quotes + permission. Growth bullet + AI Assistants card line: waiting on Michal's pick from offered alternatives.
+- Testimonials: waiting on 4 real quotes + permission.
