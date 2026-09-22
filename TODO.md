@@ -2,8 +2,9 @@
 
 ## Now
 - [x] Services copy review approved 2026-09-22; committed, pushed, deployed.
-- [ ] WebKit mobile pass on /services + home (not yet done for the Services pages). [loop — subagent]
-- [ ] Update docs/VERIFICATION.md + DESKTOP-APPROVALS.md with Health Check / Services / testimonial stripe. [loop — subagent]
+- [x] WebKit mobile pass on /services + home — 2026-09-22, see docs/VERIFICATION.md.
+- [x] docs/VERIFICATION.md updated 2026-09-22.
+- [ ] DESKTOP-APPROVALS.md: add Health Check section, header pill, Services pages, testimonial stripe. [loop — subagent]
 
 ## Next
 - [ ] Add the 4 real testimonials to `testimonials` in content.json (quote, name, role, company) once received. [needs Michal]
