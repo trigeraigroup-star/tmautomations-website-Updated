@@ -3,14 +3,12 @@
 ## Status (2026-09-17, 22:30)
 - Live at https://www.tmautomations.io (Cloudflare Workers). Deployed 2026-09-17 19:27 (commit 5db4fad, version a1f86303): Health Check pill + section,
   five Services pages, copy edits up to Custom AI Agents FAQ 4. All routes verified 200 with new copy.
-- After that deploy: one more copy edit committed locally (Custom AI Agents "what you get" line) — NOT pushed, NOT deployed.
-- Michal's plan: he finishes commenting AI Marketing + SEO/AEO/Lead Gen, then we push + deploy again.
+- 2026-09-22: AI Marketing + SEO/AEO/Lead Gen reviewed; Michal said "services content approved". Committed, pushed and deployed the same day.
 - In progress: copy review of the Health Check offer + five Services pages via the annotation artifact
   https://claude.ai/artifact/GExxLQU4HPc62L3xCDbWcf (comments URL .../code/artifact/7b6c3b58-3641-4898-966b-be220eb96ed8).
   Michal comments line by line; each comment is applied to `app/content.json` / `app/services/data.ts`, the review page is rebuilt
   with `node <scratchpad>/build-copy-review.mjs <repo> <scratchpad>` and republished, reply + resolve in the thread.
-- Reviewed so far: Health Check, Workflow Automation, AI Assistants (all approved), Custom AI Agents (FAQs 2-4 + "you get" done;
-  local/hosted merged into one question, now 5 FAQs). Not yet reviewed: AI Marketing, SEO/AEO/Lead Gen. No open threads.
+- Copy review COMPLETE (all five Services pages + Health Check approved 2026-09-22). No open threads. Artifact kept for future rounds.
 - On resume: `ArtifactComments watch` on the artifact URL so new comments wake the session; rebuild script lives in the session scratchpad
   (`build-copy-review.mjs`) — if the scratchpad is gone after restart, recreate it from app/content.json + app/services/data.ts (one <section> per page, one .line per copy key).
 

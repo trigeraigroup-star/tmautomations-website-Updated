@@ -1,8 +1,7 @@
 # TODO — TMAutomations website
 
-## Now (copy review in progress)
-- [ ] Finish comment round on the review artifact: AI Marketing, SEO/AEO/Lead Gen pages (Custom AI Agents done). [needs Michal]
-- [ ] When Michal says done: `npm test && npm run lint && npx tsc --noEmit`, commit, `git push`, `npm run build && npx wrangler deploy -c dist/server/wrangler.json`, curl the 5 service pages. [loop — subagent]
+## Now
+- [x] Services copy review approved 2026-09-22; committed, pushed, deployed.
 - [ ] WebKit mobile pass on /services + home (not yet done for the Services pages). [loop — subagent]
 - [ ] Update docs/VERIFICATION.md + DESKTOP-APPROVALS.md with Health Check / Services / testimonial stripe. [loop — subagent]
 
