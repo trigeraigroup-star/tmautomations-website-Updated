@@ -16,7 +16,16 @@ Source: the user's pasted annotation export and subsequent chat approvals. Lates
 - Reduced-motion final states; scroll text retained with moving teal-line pulse.
 
 ## Explicitly deferred
-- Mobile adaptation.
+- Mobile adaptation (later built and approved; see docs/VERIFICATION.md).
+
+## Approved 2026-09-17 → 2026-09-22
+- Header: Services hover menu first, then Approach / Process / Work / Contact, then the teal "Free Health Check" pill top-right.
+- Automation Health Check note between Approach and Process; copy in `healthCheck` (content.json).
+- Five Services pages under /services (Workflow Automation, AI Assistants, Custom AI Agents, AI Marketing, SEO, AEO & Lead Generation), reading layout, FAQ accordion, Health Check CTA. All copy reviewed line by line and approved 2026-09-22.
+- Testimonial stripe under the Work dashboard, rendered only once real quotes exist.
+- Contact scene: company name shows "TM" in teal like the header.
+- Logo wordmark: "Automations" carries a 3.5px ink outline (middle weight; 7px was rejected as too bold).
+- Favicon: full mark on a parchment tile with the T and M enlarged to fill the ring (favicon-only geometry). Teal-tile and ink-tile variants rejected; the site logo itself stays unchanged.
 
 
 

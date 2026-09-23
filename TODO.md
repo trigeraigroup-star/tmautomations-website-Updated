@@ -4,9 +4,10 @@
 - [x] Services copy review approved 2026-09-22; committed, pushed, deployed.
 - [x] WebKit mobile pass on /services + home — 2026-09-22, see docs/VERIFICATION.md.
 - [x] docs/VERIFICATION.md updated 2026-09-22.
-- [ ] DESKTOP-APPROVALS.md: add Health Check section, header pill, Services pages, testimonial stripe. [loop — subagent]
+- [x] DESKTOP-APPROVALS.md: Health Check, header pill, Services pages, testimonial stripe, logo/favicon approvals added 2026-09-22.
 
 ## Next
+- [ ] If the favicon ever needs regenerating: edit `public/favicon.svg`, re-render sizes (see memory.md), redeploy. [loop — subagent]
 - [ ] Add the 4 real testimonials to `testimonials` in content.json (quote, name, role, company) once received. [needs Michal]
 - [ ] Point DMARC report address at a mailbox you read. [needs Michal]
 - [ ] Optional: raster invoice/quote icon in the sheet's style. [loop — subagent]

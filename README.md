@@ -37,6 +37,7 @@ The Resend key is stored as a Worker secret with `wrangler secret put` (see `doc
 - `app/page.tsx` — scene order and composition. `app/components/` — artwork, threads, process, contact, motion.
 - `app/globals.css` — tokens and base layout. `app/desktop-approved.css` — the approved desktop design. `app/mobile.css` — phone layout (≤800px).
 - `app/api/contact/route.ts` + `app/lib/contact-server.mjs` — form delivery. `app/lib/contact.mjs` — browser adapter.
+- `public/favicon.svg` (+ favicon.ico, favicon-32/icon-192/icon-512.png, apple-touch-icon.png) — tab and home-screen icons; edit the SVG and re-render the PNGs.
 - `public/images/tiles/` — paper/drawing cutouts extracted from the approved sheet (see `public/images/PROVENANCE.md`).
 - `docs/EDITING.md` — how to edit copy, artwork, motion and delivery. `DESKTOP-APPROVALS.md` — the record of approved decisions.
 - `public/process-demos/` — early layout demos, not used by the site.

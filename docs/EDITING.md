@@ -20,6 +20,10 @@ Start the preview with `npm run dev`, then open the Local URL it prints (normall
 
 Small illustration labels live in `Artwork.tsx`; process illustration introductions and substep captions live in `Process.tsx`; the owner benefit lines live in `page.tsx`. These are editable text, not baked into images. Main business content remains in `content.json`. Each stage has a detail sheet (`details` in content.json) opened by “More details”, with deep links `#process/discover|build|support`.
 
+## Logo and favicon
+- Header/footer logo: `app/components/BrandLogo.tsx` (inline SVG, animated). Wordmark weight is the `stroke-width` on `.lg-word`.
+- Favicon: `public/favicon.svg` is the source; the ICO/PNG sizes are rendered from it (Playwright WebKit screenshot at 32/180/192/512, ICO = 32px PNG wrapped). Links live in `app/layout.tsx` metadata.icons.
+
 ## Real proof
 `testimonials` in content.json feeds the drifting stripe under the Work dashboard (`app/components/Testimonials.tsx`). Fields: `quote`, `name`, optional `role`, `company`. With an empty list nothing renders. `caseStudies` is reserved for later. Never publish illustrative metrics or identities as real proof.
 

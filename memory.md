@@ -1,10 +1,13 @@
 # memory.md — TMAutomations website
 
-## Status (2026-09-17, 22:30)
+## Status (2026-09-22, 18:45)
 - Live at https://www.tmautomations.io (Cloudflare Workers). Deployed 2026-09-17 19:27 (commit 5db4fad, version a1f86303): Health Check pill + section,
   five Services pages, copy edits up to Custom AI Agents FAQ 4. All routes verified 200 with new copy.
 - 2026-09-22: AI Marketing + SEO/AEO/Lead Gen reviewed; Michal said "services content approved". Committed, pushed and deployed the same day.
-- In progress: copy review of the Health Check offer + five Services pages via the annotation artifact
+- 2026-09-22 evening, all deployed (last commit be9db44, CF version 81b7f33d): contact-scene teal "TM"; logo wordmark outline 3.5px (was faded, then too bold);
+  favicon set (svg/ico/png/apple) = full mark on parchment tile with TM letters enlarged 1.2x + shifted right ("variant D", favicon only); Workflow FAQ 1 save-money answer.
+- Decision: site logo stays as is (option-D letters in the lockup flatten the foot; Michal said "leave as is").
+- Copy review ran through the annotation artifact
   https://claude.ai/artifact/GExxLQU4HPc62L3xCDbWcf (comments URL .../code/artifact/7b6c3b58-3641-4898-966b-be220eb96ed8).
   Michal comments line by line; each comment is applied to `app/content.json` / `app/services/data.ts`, the review page is rebuilt
   with `node <scratchpad>/build-copy-review.mjs <repo> <scratchpad>` and republished, reply + resolve in the thread.
@@ -25,6 +28,8 @@
 
 ## What worked / broke
 - Annotation artifact per line with orange keys works well for copy review.
+- Favicon lesson: thin teal strokes on parchment vanish at 16px; the tab icon needs ~2x stroke weight and the letters filling the ring. Icons rendered from `public/favicon.svg` with Playwright WebKit (scratch `wk/icons.mjs`); favicon.ico is a PNG-in-ICO wrapper.
+- Scratchpad is wiped on Mac restart: rebuild scripts (`build-copy-review.mjs`, `wk/`) from the notes here when needed.
 - Next.js `<Link>` lint rule: use plain `<a>` with an eslint-disable comment (static pages).
 - Dev server: `npm run dev` via preview_start "tmautomations-dev"; if port 3000 is dead, restart it.
 
