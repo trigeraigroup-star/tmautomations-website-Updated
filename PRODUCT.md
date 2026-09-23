@@ -40,7 +40,7 @@ Typical client work includes email follow-up, quotes, invoices, supplier coordin
 ## Brand Commitments
 
 - Company name: TMAutomations, carrying the meaning “your automation team.”
-- Founder: Michal Triger, a Los Angeles-based solo consultant with about 15 years of operations experience and fluency in English and Hebrew.
+- Founder: Michal Treiger, a Los Angeles-based solo consultant with about 15 years of operations experience and fluency in English and Hebrew.
 - Voice: plain, honest, professional, practical, and non-technical.
 - The company is the brand; do not show Michal's face or use personal photography.
 - Visual world: warm cream, deep ink, sage, bright olive, and sparing light blue; the How We Work chapter shifts to midnight slate, amber, and linen-like physical texture.
