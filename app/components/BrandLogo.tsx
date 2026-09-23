@@ -2,7 +2,7 @@
 const svg=`<svg class="brand-logo" role="img" aria-label="TMAutomations" xmlns="http://www.w3.org/2000/svg" viewBox="126 119 1274 511">
 <style>
 .brand-logo{--seek:0s}
-.lg-word{fill:#223d36;stroke:#223d36;stroke-width:7px;stroke-linejoin:round;paint-order:stroke;opacity:0;animation:word .6s ease-out calc(2.48s - var(--seek)) forwards}
+.lg-word{fill:#223d36;stroke:#223d36;stroke-width:3.5px;stroke-linejoin:round;paint-order:stroke;opacity:0;animation:word .6s ease-out calc(2.48s - var(--seek)) forwards}
 .lg-line{fill:none;stroke:#386f65;stroke-linecap:round;stroke-linejoin:round;stroke-width:28.8px;stroke-dasharray:1;stroke-dashoffset:1;animation:draw linear forwards}
 .lg-dot{fill:#386f65;transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .28s cubic-bezier(.2,1.4,.4,1) forwards}
 #lg-T{animation-duration:0.4s;animation-delay:calc(0.15s - var(--seek))}
