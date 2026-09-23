@@ -1,5 +1,11 @@
 # memory.md — TMAutomations website
 
+## On resume (read first)
+- Nothing in flight. Site live, repo clean and pushed (main = c7c6df9). No open artifact threads.
+- Next work only starts when Michal brings something: testimonials (4 quotes), DMARC mailbox, or a new comment round on the artifact.
+- Routine for any change: edit → `npm test && npm run lint && npx tsc --noEmit` → commit (ask first) → `git push` → `npm run build && npx wrangler deploy -c dist/server/wrangler.json` → curl the page.
+- Dev server: preview_start "tmautomations-dev" (port 3000). Scratchpad tools (copy-review builder, Playwright WebKit, favicon renderer) do not survive a restart; rebuild from the notes below.
+
 ## Status (2026-09-22, 18:45)
 - Live at https://www.tmautomations.io (Cloudflare Workers). Deployed 2026-09-17 19:27 (commit 5db4fad, version a1f86303): Health Check pill + section,
   five Services pages, copy edits up to Custom AI Agents FAQ 4. All routes verified 200 with new copy.
