@@ -5,10 +5,10 @@
 
 ## Next
 - [ ] If the favicon ever needs regenerating: edit `public/favicon.svg`, re-render sizes (see memory.md), redeploy. [loop — subagent]
-- [ ] Point DMARC report address at a mailbox you read. [needs Michal]
 - [ ] Optional: raster invoice/quote icon in the sheet's style. [loop — subagent]
 
 ## Done
+- 2026-09-29: DMARC reports now go to Postmark's free weekly digest (Cloudflare DNS, p=quarantine kept).
 - 2026-09-29: 4 testimonials live (Dynamic Vision, Aby-media, Lulyboo, EZTR) with client logos; em dashes removed from site copy.
 - 2026-09-22: Services copy review approved + deployed; WebKit mobile pass; contact-scene teal TM; logo wordmark weight; favicon set (variant D); docs/VERIFICATION.md, DESKTOP-APPROVALS.md, README, EDITING updated.
 - 2026-09-07 → 09-09: desktop review, Resend delivery, Cloudflare deploy, custom domain, mobile layout, stage sheets, contact popup.
