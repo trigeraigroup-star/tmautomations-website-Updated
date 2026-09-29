@@ -181,7 +181,7 @@
   },
   "work": {
     "title": "See what moved. Know what needs attention.",
-    "body": "A clear view of the work—so you can make decisions without chasing updates or carrying every unfinished task in your head.",
+    "body": "A clear view of the work, so you can make decisions without chasing updates or carrying every unfinished task in your head.",
     "states": [
       {
         "title": "Taken care of",
@@ -294,7 +294,36 @@
     "success": "Thanks for reaching out.\nWe’ll be in touch soon."
   },
   "caseStudies": [],
-  "testimonials": [],
+  "testimonials": [
+    {
+      "quote": "Our teams work all over the world, and we needed to update our systems to be accessible, accurate, and clear for everyone. TM Automations sat with us, understood how we actually operate, and helped design internal systems and a CRM that fit our needs - we already started working on our next project. They keep things simple and build tools our team actually uses every day. Highly recommended for any growing business.",
+      "name": "Jimi",
+      "role": "Co-founder",
+      "company": "Dynamic Vision, NY",
+      "logo": "/images/clients/dynamic-vision.webp"
+    },
+    {
+      "quote": "We needed real support for our production process, and TM Automations built AI solutions that take care of the research, tracking, and day-to-day admin that used to eat our time. Work that took hours now runs on its own. Working with their team was wonderful - they got what we needed, and the results are amazing. Highly recommend!",
+      "name": "Kimberley",
+      "role": "CEO",
+      "company": "Aby-media, Los Angeles",
+      "logo": "/images/clients/aby-media.webp"
+    },
+    {
+      "quote": "Product development, branding, and packaging are where e-commerce brands lose weeks, and we were no exception. TM Automations built us systems that keep our processes moving - the work progresses, the team is always in the loop, and the results meet our deadlines and our standards. We recommend them to any business that is done with the manual work and wants quality results.",
+      "name": "Pazit",
+      "role": "CEO",
+      "company": "Lulyboo, CA",
+      "logo": "/images/clients/lulyboo.webp"
+    },
+    {
+      "quote": "In a notary office, accuracy is everything and results are what clients remember. TM Automations understood both. They took our repetitive order and form processing and made it faster and more accurate than we could manage by hand - so we could deliver quicker results to our clients. The hours we’ve saved go straight back into serving people. If you run a document service or legal-admin office, call them. The results will be worth it.",
+      "name": "Ehud",
+      "role": "Owner",
+      "company": "EZTR, NY",
+      "logo": "/images/clients/eztr.webp"
+    }
+  ],
   "footer": "Practical systems. Human partnership.",
   "healthCheck": {
     "label": "Start here",

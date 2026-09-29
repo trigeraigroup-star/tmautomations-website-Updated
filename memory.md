@@ -2,7 +2,8 @@
 
 ## On resume (read first)
 - Nothing in flight. Site live, repo clean and pushed (main = c7c6df9). No open artifact threads.
-- Next work only starts when Michal brings something: testimonials (4 quotes), DMARC mailbox, or a new comment round on the artifact.
+- 2026-09-29: testimonials shipped (4 quotes + logos in `public/images/clients/`, `logo` field in content.json). No em dashes anywhere in copy (Michal: AI tell) - keep his " - ".
+- Next work only starts when Michal brings something: DMARC mailbox or a new comment round on the artifact.
 - Routine for any change: edit → `npm test && npm run lint && npx tsc --noEmit` → commit (ask first) → `git push` → `npm run build && npx wrangler deploy -c dist/server/wrangler.json` → curl the page.
 - Dev server: preview_start "tmautomations-dev" (port 3000). Scratchpad tools (copy-review builder, Playwright WebKit, favicon renderer) do not survive a restart; rebuild from the notes below.
 

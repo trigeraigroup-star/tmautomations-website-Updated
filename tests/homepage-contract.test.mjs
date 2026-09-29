@@ -8,7 +8,8 @@ test('approved content is centralized and has valid navigation destinations', ()
  assert.deepEqual(c.nav.map(n=>n.id), ['approach','process','work','contact']);
  assert.equal(c.hero.title,'There’s another way this day could go.');
  assert.equal(c.process.steps.length,3);
- assert.deepEqual(c.caseStudies,[]); assert.deepEqual(c.testimonials,[]);
+ assert.deepEqual(c.caseStudies,[]);
+ assert.ok(c.testimonials.every(t=>t.quote&&t.name&&t.company), 'testimonials need quote, name, company');
  assert.equal(c.contact.phoneHref,'tel:+18507756909');
 });
 test('motion fallback and contact anchor exist',()=>{
