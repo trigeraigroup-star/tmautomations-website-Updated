@@ -1,0 +1,201 @@
+{
+  "ui": {
+    "opening": {
+      "en": ["Before our conversation", "I'd love to get to know you and your business a little.", "This takes about 7 minutes.", "Answer the way things really are today. The untidy parts are the most useful parts.", "Short answers are welcome, and you can skip anything you'd rather talk through on our call.", "Your answers come to me only."],
+      "he": ["לפני שנדבר", "אשמח להכיר קצת אתכם ואת העסק שלכם.", "זה לוקח בערך 7 דקות.", "ענו כפי שהדברים באמת נראים היום. דווקא החלקים הפחות מסודרים הם המועילים ביותר.", "תשובות קצרות יתקבלו בברכה, ואפשר לדלג על כל מה שתעדיפו להשאיר לשיחה.", "התשובות מגיעות אליי בלבד."]
+    },
+    "sign": {"en": "Michal Treiger, TMAutomations", "he": "מיכל טריגר, TMAutomations"},
+    "name": {"en": "Your name", "he": "השם שלכם"},
+    "business": {"en": "Business name", "he": "שם העסק"},
+    "email": {"en": "Email", "he": "אימייל"},
+    "role": {"en": "Your role", "he": "התפקיד שלכם"},
+    "roles": [
+      {"v": "owner", "en": "Owner", "he": "בעלים"},
+      {"v": "partner", "en": "Partner", "he": "שותף/ה"},
+      {"v": "manager", "en": "Manager", "he": "מנהל/ת"},
+      {"v": "other", "en": "Other", "he": "אחר"}
+    ],
+    "optional": {"en": "optional", "he": "לא חובה"},
+    "pickAll": {"en": "Pick all that apply", "he": "אפשר לבחור כמה"},
+    "pickMax": {"en": "Pick up to 2", "he": "אפשר לבחור עד 2"},
+    "typeIt": {"en": "Type it in", "he": "כתבו כאן"},
+    "whichService": {"en": "Which one?", "he": "של איזו חברה?"},
+    "otherService": {"en": "Another one: type it in", "he": "שירות אחר: כתבו כאן"},
+    "rank": {"en": ["1st", "2nd", "3rd"], "he": ["ראשון", "שני", "שלישי"]},
+    "choose": {"en": "Choose", "he": "בחרו"},
+    "submit": {"en": "Send my answers", "he": "שליחת התשובות"},
+    "pending": {"en": "Sending…", "he": "שולחים…"},
+    "closing": {"en": "Thank you. I'm excited for our meeting.", "he": "תודה. מחכה בקוצר רוח לפגישה שלנו."},
+    "thanks": {
+      "en": ["Thank you. This helps me come prepared for you.", "I'll read every answer before our call, and we'll start from where you are.", "I'm excited for our meeting."],
+      "he": ["תודה. זה עוזר לי להתכונן לקראתכם.", "אקרא כל תשובה לפני השיחה, ונתחיל מהמקום שבו אתם נמצאים.", "מחכה לשיחה שלנו."]
+    },
+    "errRequired": {"en": "Please complete this field.", "he": "נא למלא את השדה הזה."},
+    "errEmail": {"en": "Enter a valid email address.", "he": "נא להזין כתובת אימייל תקינה."},
+    "errSend": {"en": "We could not send your answers right now. They are still saved here. Please try again or call (850) 775-6909.", "he": "לא הצלחנו לשלוח את התשובות כרגע. הן עדיין שמורות כאן. נסו שוב או התקשרו ‎(850) 775-6909‎."}
+  },
+  "sections": [
+    {
+      "id": "business",
+      "title": {"en": "Your business.", "he": "העסק שלכם."},
+      "intro": {"en": "Help me get to know your business.", "he": "עזרו לי להכיר את העסק שלכם."},
+      "questions": [
+        {"id": "q1", "type": "textarea", "label": {"en": "What does your business do, in a sentence or two?", "he": "מה העסק שלכם עושה, במשפט או שניים?"}},
+        {"id": "q2", "type": "single", "label": {"en": "Which field are you in?", "he": "באיזה תחום אתם פועלים?"}, "options": [
+          {"v": "food", "en": "Restaurant or food", "he": "מסעדה או מזון"},
+          {"v": "retail", "en": "Retail or online store", "he": "קמעונאות או חנות אונליין"},
+          {"v": "manufacturing", "en": "Manufacturing or showroom", "he": "ייצור או אולם תצוגה"},
+          {"v": "legal", "en": "Legal, notary or accounting", "he": "משפטים, נוטריון או הנהלת חשבונות"},
+          {"v": "health", "en": "Health or wellness", "he": "בריאות או וולנס"},
+          {"v": "home", "en": "Home services or trades", "he": "שירותים לבית ובעלי מקצוע"},
+          {"v": "other", "en": "Other", "he": "אחר"}
+        ]},
+        {"id": "q3", "type": "textarea", "label": {"en": "What makes your business unique?", "he": "מה מייחד את העסק שלכם?"}, "hint": {"en": "What you do best, and what customers remember you for.", "he": "מה אתם עושים הכי טוב, ובזכות מה הלקוחות זוכרים אתכם."}}
+      ]
+    },
+    {
+      "id": "team",
+      "title": {"en": "Your team.", "he": "הצוות שלכם."},
+      "intro": {"en": "Tell me about the people who keep it all running.", "he": "ספרו לי על האנשים שדואגים שהכול ימשיך לעבוד."},
+      "questions": [
+        {"id": "q4", "type": "single", "label": {"en": "How many people work in the business, including you?", "he": "כמה אנשים עובדים בעסק, כולל אתכם?"}, "options": [
+          {"v": "1", "en": "Just me", "he": "רק אני"},
+          {"v": "2-5", "en": "2–5", "he": "2–5"},
+          {"v": "6-15", "en": "6–15", "he": "6–15"},
+          {"v": "16-30", "en": "16–30", "he": "16–30"},
+          {"v": "30+", "en": "More than 30", "he": "יותר מ‑30"}
+        ]},
+        {"id": "q5", "type": "single", "label": {"en": "Who handles the daily admin: quotes, invoices, scheduling, follow-ups?", "he": "מי מטפל באדמיניסטרציה היומיומית: הצעות מחיר, חשבוניות, תיאומים, מעקב מול לקוחות?"}, "options": [
+          {"v": "me", "en": "Mostly me", "he": "בעיקר אני"},
+          {"v": "one", "en": "One dedicated person", "he": "אדם אחד שזה התפקיד שלו"},
+          {"v": "shared", "en": "Shared across the team", "he": "מתחלק בין אנשי הצוות"},
+          {"v": "whoever", "en": "Whoever has a moment", "he": "מי שפנוי באותו רגע"}
+        ]}
+      ]
+    },
+    {
+      "id": "tools",
+      "title": {"en": "Your tools.", "he": "הכלים שלכם."},
+      "intro": {"en": "Whatever you use today is the right starting point.", "he": "מה שאתם משתמשים בו היום הוא נקודת ההתחלה הנכונה."},
+      "questions": [
+        {"id": "q6", "type": "tools", "label": {"en": "Which of these do you use to run the business, and from which company?", "he": "באילו מהכלים האלה אתם משתמשים לניהול העסק, ושל איזו חברה?"}, "tools": [
+          {"v": "email", "en": "Email", "he": "אימייל", "services": ["Gmail / Google Workspace", "Outlook / Microsoft 365", "Yahoo", "iCloud"]},
+          {"v": "messaging", "en": "Messaging", "he": "הודעות", "services": ["WhatsApp", "WhatsApp Business", "Text / iMessage", "Slack", "Microsoft Teams"]},
+          {"v": "sheets", "en": "Spreadsheets and documents", "he": "גיליונות ומסמכים", "services": ["Google Sheets / Docs", "Microsoft Excel / Word", "Airtable"]},
+          {"v": "files", "en": "File storage", "he": "אחסון קבצים", "services": ["Google Drive", "OneDrive / SharePoint", "Dropbox", "iCloud"]},
+          {"v": "calendar", "en": "Calendar and booking", "he": "יומן וקביעת תורים", "services": ["Google Calendar", "Outlook Calendar", "Calendly", "Acuity", "Square Appointments"]},
+          {"v": "crm", "en": "CRM (customer list and sales tracking)", "he": "CRM (רשימת לקוחות ומעקב מכירות)", "services": ["HubSpot", "Salesforce", "Zoho", "Pipedrive", "monday.com"]},
+          {"v": "accounting", "en": "Accounting and invoicing", "he": "הנהלת חשבונות וחשבוניות", "services": ["QuickBooks", "Xero", "FreshBooks", "Wave", "Zoho Books"]},
+          {"v": "board", "en": "Project or task board", "he": "לוח משימות או פרויקטים", "services": ["Trello", "Asana", "monday.com", "ClickUp", "Notion"]},
+          {"v": "store", "en": "Online store or register", "he": "חנות אונליין או קופה", "services": ["Shopify", "Square", "Toast", "Clover", "WooCommerce", "Amazon"]},
+          {"v": "ai", "en": "AI tools", "he": "כלי AI", "services": ["ChatGPT", "Claude", "Gemini", "Grok", "Microsoft Copilot"]},
+          {"v": "paper", "en": "Paper or notebook", "he": "נייר או מחברת"},
+          {"v": "other", "en": "Something else", "he": "משהו אחר"}
+        ]},
+        {"id": "q7", "type": "multi", "label": {"en": "Where do you keep the information your business runs on?", "he": "איפה נשמר המידע שהעסק שלכם נשען עליו?"}, "hint": {"en": "For example: customer details, orders, quotes, prices, schedules, supplier contacts.", "he": "למשל: פרטי לקוחות, הזמנות, הצעות מחיר, מחירים, לוחות זמנים, אנשי קשר של ספקים."}, "options": [
+          {"v": "one", "en": "In one system", "he": "במערכת אחת"},
+          {"v": "several", "en": "Spread across several tools", "he": "מפוזר בין כמה כלים"},
+          {"v": "inbox", "en": "In messages and inboxes", "he": "בהודעות ובתיבות דואר"},
+          {"v": "head", "en": "In my head", "he": "בראש שלי"},
+          {"v": "paper", "en": "On paper", "he": "על נייר"}
+        ]},
+        {"id": "q8", "type": "single", "label": {"en": "Have you tried automation or AI in the business before?", "he": "האם כבר ניסיתם אוטומציה או AI בעסק?"}, "options": [
+          {"v": "yes", "en": "Yes, and we still use it", "he": "כן, ואנחנו עדיין משתמשים"},
+          {"v": "didnt", "en": "Yes, and it didn't stick", "he": "כן, וזה לא החזיק מעמד"},
+          {"v": "no", "en": "Not yet", "he": "עדיין לא"}
+        ], "followup": {"when": "didnt", "label": {"en": "What happened?", "he": "מה קרה?"}}}
+      ]
+    },
+    {
+      "id": "heavy",
+      "title": {"en": "Where the week gets heavy.", "he": "איפה השבוע נהיה כבד."},
+      "intro": {"en": "Tell me about the work that drains your energy.", "he": "ספרו לי על העבודה ששואבת מכם אנרגיה."},
+      "questions": [
+        {"id": "q9", "type": "multi", "label": {"en": "Which of these sound like your week?", "he": "מה מהבאים נשמע כמו השבוע שלכם?"}, "options": [
+          {"v": "followup", "en": "Following up with customers", "he": "מעקב מול לקוחות"},
+          {"v": "late", "en": "Quotes or invoices going out late", "he": "הצעות מחיר או חשבוניות שיוצאות באיחור"},
+          {"v": "retype", "en": "Typing the same information into more than one place", "he": "הקלדת אותו מידע ביותר ממקום אחד"},
+          {"v": "repeat", "en": "Answering the same questions again and again", "he": "מענה על אותן שאלות שוב ושוב"},
+          {"v": "scheduling", "en": "Scheduling and coordinating people", "he": "תיאום לוחות זמנים ואנשים"},
+          {"v": "throughme", "en": "Everything goes through me", "he": "הכול עובר דרכי"},
+          {"v": "searching", "en": "Searching for files or information", "he": "חיפוש קבצים או מידע"},
+          {"v": "samepage", "en": "Keeping the team on the same page", "he": "לוודא שכל הצוות מעודכן"},
+          {"v": "leads", "en": "Leads going quiet", "he": "לידים שמתקררים"},
+          {"v": "other", "en": "Other", "he": "אחר"}
+        ]},
+        {"id": "q10", "type": "rank", "from": "q9", "label": {"en": "Which three would you most like to run on their own?", "he": "אילו שלושה הייתם הכי רוצים שירוצו מעצמם?"}, "textLabel": {"en": "How much would that save you? (time / money / energy)", "he": "כמה זה יחסוך לכם? (זמן / כסף / אנרגיה)"}},
+        {"id": "q11", "type": "single", "label": {"en": "Roughly how many hours a week go to repetitive work, across you and your team?", "he": "בערך כמה שעות בשבוע הולכות על עבודה שחוזרת על עצמה, אצלכם ואצל הצוות?"}, "options": [
+          {"v": "<5", "en": "Under 5", "he": "פחות מ‑5"},
+          {"v": "5-10", "en": "5–10", "he": "5–10"},
+          {"v": "10-20", "en": "10–20", "he": "10–20"},
+          {"v": "20+", "en": "More than 20", "he": "יותר מ‑20"},
+          {"v": "unsure", "en": "Hard to say", "he": "קשה לומר"}
+        ]}
+      ]
+    },
+    {
+      "id": "concerns",
+      "title": {"en": "What might hold you back.", "he": "מה עלול לעכב אתכם."},
+      "intro": {"en": "Starting something new always comes with concerns. Tell me yours, so I'll know how to support you best.", "he": "כל התחלה חדשה מגיעה עם חששות. ספרו לי על שלכם, כדי שאדע איך לתמוך בכם בצורה הטובה ביותר."},
+      "questions": [
+        {"id": "q12", "type": "multi", "label": {"en": "Which of these are true for you right now?", "he": "מה מהבאים נכון לגביכם כרגע?"}, "options": [
+          {"v": "guide", "en": "I hear about automation everywhere and I'm not sure how and where to start. I'd like someone to guide me", "he": "שומעים על אוטומציה בכל מקום ולא ברור לנו מאיפה להתחיל. נשמח שמישהו ילווה אותנו"},
+          {"v": "budget", "en": "Budget is tight", "he": "התקציב מצומצם כרגע"},
+          {"v": "fit", "en": "I'm unsure how the technology could fit my business", "he": "לא בטוח שטכנולוגיה כזו מתאימה לעסק כמו שלנו"},
+          {"v": "mistakes", "en": "I worry about mistakes in front of customers", "he": "חשש מטעויות מול לקוחות"},
+          {"v": "organize", "en": "Things need organizing before anything is built on them", "he": "צריך לעשות סדר לפני שבונים על זה משהו"},
+          {"v": "team", "en": "My team may need time to get used to a new way of working", "he": "ייתכן שלצוות ייקח זמן להתרגל לדרך עבודה חדשה"},
+          {"v": "time", "en": "I have very little time for a project", "he": "יש לנו מעט מאוד זמן לפרויקט"},
+          {"v": "burned", "en": "We tried something before and it let us down", "he": "ניסינו משהו בעבר והתאכזבנו"},
+          {"v": "privacy", "en": "I care about keeping our data private", "he": "חשוב לנו לשמור על פרטיות המידע שלנו"},
+          {"v": "none", "en": "None of these, I'm ready", "he": "אף אחד מאלה, אנחנו מוכנים"},
+          {"v": "other", "en": "Other", "he": "אחר"}
+        ]}
+      ]
+    },
+    {
+      "id": "future",
+      "title": {"en": "Where you want to be.", "he": "לאן אתם רוצים להגיע."},
+      "intro": {"en": "Let's plan your best future.", "he": "בואו נתכנן את העתיד הטוב ביותר שלכם."},
+      "questions": [
+        {"id": "q13", "type": "textarea", "label": {"en": "Picture six months from now with this working well. What is different in your day?", "he": "דמיינו את עצמכם בעוד חצי שנה, כשהכול עובד היטב. מה שונה ביום שלכם?"}},
+        {"id": "q14", "type": "multi", "max": 2, "label": {"en": "What matters most to you?", "he": "מה הכי חשוב לכם?"}, "options": [
+          {"v": "time", "en": "Time back", "he": "יותר זמן פנוי"},
+          {"v": "slipping", "en": "Fewer things slipping", "he": "פחות דברים שנופלים בין הכיסאות"},
+          {"v": "faster", "en": "Faster answers to customers", "he": "מענה מהיר יותר ללקוחות"},
+          {"v": "sales", "en": "More leads and sales", "he": "יותר לידים ומכירות"},
+          {"v": "lessme", "en": "A business that leans less on me", "he": "עסק שתלוי בי פחות"},
+          {"v": "costs", "en": "Lower costs", "he": "הוצאות נמוכות יותר"},
+          {"v": "calm", "en": "A calmer team", "he": "צוות רגוע יותר"},
+          {"v": "clarity", "en": "Organization and clarity", "he": "סדר ובהירות"}
+        ]}
+      ]
+    },
+    {
+      "id": "start",
+      "title": {"en": "Getting started.", "he": "מתחילים."},
+      "intro": {"en": "Almost there. A few last ones about timing.", "he": "כמעט סיימנו. כמה שאלות אחרונות על תזמון."},
+      "questions": [
+        {"id": "q15", "type": "single", "label": {"en": "When would you like to begin?", "he": "מתי תרצו להתחיל?"}, "options": [
+          {"v": "asap", "en": "As soon as possible", "he": "בהקדם האפשרי"},
+          {"v": "1m", "en": "Within a month", "he": "בתוך חודש"},
+          {"v": "2-3m", "en": "In 2–3 months", "he": "בעוד 2–3 חודשים"},
+          {"v": "4-6m", "en": "In 4–6 months", "he": "בעוד 4–6 חודשים"},
+          {"v": "exploring", "en": "I'm exploring for now", "he": "בשלב זה רק בוחנים אפשרויות"}
+        ]},
+        {"id": "q16", "type": "single", "label": {"en": "How much time can you or someone on your team dedicate each week for the process?", "he": "כמה זמן בשבוע תוכלו אתם, או מישהו מהצוות, להקדיש במהלך הבנייה?"}, "options": [
+          {"v": "<1", "en": "Under 1 hour", "he": "פחות משעה"},
+          {"v": "1-2", "en": "1–2 hours", "he": "1–2 שעות"},
+          {"v": "3-5", "en": "3–5 hours", "he": "3–5 שעות"},
+          {"v": "all", "en": "As much as it takes. This is my top priority", "he": "כמה שצריך. זה בראש סדר העדיפויות שלי"}
+        ]},
+        {"id": "q17", "type": "single", "label": {"en": "Who else takes part in a decision like this?", "he": "מי עוד שותף להחלטה כזו?"}, "options": [
+          {"v": "me", "en": "Just me", "he": "רק אני"},
+          {"v": "partner", "en": "A partner", "he": "שותף או שותפה"},
+          {"v": "other", "en": "Someone else", "he": "מישהו אחר"}
+        ]},
+        {"id": "q18", "type": "textarea", "optional": true, "label": {"en": "Is there anything else you'd like me to know before we talk?", "he": "יש עוד משהו שתרצו שאדע לפני שנדבר?"}}
+      ]
+    }
+  ]
+}
